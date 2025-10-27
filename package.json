@@ -1,0 +1,25 @@
+{
+  "name": "temporal",
+  "version": "1.0.0",
+  "description": "- Next.js app in `preview-ui/` - Run: `npm install && npm run dev` from `preview-ui`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/familiarcat/temporal-wake.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/familiarcat/temporal-wake/issues"
+  },
+  "homepage": "https://github.com/familiarcat/temporal-wake#readme",
+  "devDependencies": {
+    "@octokit/rest": "^22.0.0",
+    "dotenv": "^17.2.3",
+    "tsx": "^4.20.6"
+  }
+}

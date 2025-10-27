@@ -11,7 +11,7 @@ const docs: Doc[] = [
   { id: 'outline', title: 'Outline', path: path.join(process.cwd(), '..', 'temporal_wake_outline.md') },
 ];
 
-function extractGraph(md: string) {
+function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outline', string>) {
   // Ships with mission headers, vector type, and hierarchical crew
   type Crew = { name: string; role: string; leader?: boolean };
   type Ship = { mission: string; launch: number; vector: 'military'|'science'|'colony'; crew: Crew[] };
@@ -104,6 +104,8 @@ function extractGraph(md: string) {
   g += 'classDef bloomCrew fill:#eaf4e0,stroke:#2d6a4f,color:#111\n';
   g += 'classDef promHeader fill:#5a189a,stroke:#5a189a,color:#fff,stroke-width:3px\n';
   g += 'classDef promCrew fill:#efeafe,stroke:#5a189a,color:#111\n';
+  // Connection event nodes (clickable)
+  g += 'classDef event fill:#fff7ed,stroke:#c2410c,color:#111,stroke-dasharray: 2 2\n';
   // Lane visuals (nested subgraphs): command / operations / science
   const laneCmdStyle = 'fill:#fff5f5,stroke:#fecaca,color:#111,stroke-dasharray: 3 3';
   const laneOpsStyle = 'fill:#f8fafc,stroke:#e2e8f0,color:#111,stroke-dasharray: 3 3';
@@ -149,6 +151,7 @@ function extractGraph(md: string) {
     const m = text.match(re);
     return m ? m.length : 0;
   }
+
   // Sort ships by launch year ascending for left-to-right placement
   const ordered = Object.entries(shipsWithDerivedLaunch).sort((a,b) => a[1].launch - b[1].launch);
   for (const [ship, meta] of ordered) {
@@ -240,23 +243,87 @@ function extractGraph(md: string) {
     // Header already emphasized via class
   }
 
-  // Character-level interactions (kept minimal)
-  g += 'WEBB-->KAITO\n';
-  g += 'VASQUEZ---PARK\n';
-  g += 'VASQUEZ-->KAITO\n';
-  g += 'KAITO---AL-HAMADI\n';
-  g += 'REEVES-->PARK\n';
-  g += 'CHEN-->PARK\n';
-  g += 'HARTMANN---TCHAIKOVSKY\n';
+  // Helper to sanitize IDs like node creation above
+  const idOf = (s: string) => s.replace(/[^A-Za-z0-9]/g,'');
+  const url = (doc: 'screenplay'|'novel'|'outline', q: string) => `/${doc}?mode=styled&q=${encodeURIComponent(q)}`;
+  let ev = 0;
+  function addEvent(from: string, to: string, label: string, doc: 'screenplay'|'novel'|'outline', q: string) {
+    const eId = `EV${ev++}`;
+    g += `${eId}["${label}"]:::event\n`;
+    g += `${idOf(from)}-->${eId}-->${idOf(to)}\n`;
+    g += `click ${eId} "${url(doc, q)}" "${label} — open ${doc}"\n`;
+  }
+  function findPhrase(doc: 'screenplay'|'novel'|'outline', phrases: string[]): string | undefined {
+    const text = (docTexts?.[doc] ?? '').toLowerCase();
+    for (const p of phrases) { if (text.includes(p.toLowerCase())) return p; }
+    return undefined;
+  }
+  function addEventSmart(from: string, to: string, label: string, candidates: Array<{doc: 'screenplay'|'novel'|'outline', phrases: string[] }>) {
+    for (const c of candidates) {
+      const phrase = findPhrase(c.doc, c.phrases);
+      if (phrase) { addEvent(from, to, label, c.doc, phrase); return; }
+    }
+    addEvent(from, to, label, 'outline', `${from} ${to}`);
+  }
+
+  // Character-level interactions with reasons + links
+  addEventSmart('WEBB','KAITO','defection toward exploration', [
+    { doc: 'screenplay', phrases: ['We come in peace','Odyssey Venture, launched from Earth in the year 2134'] },
+    { doc: 'outline', phrases: ["Odyssey Venture (2134) represents new philosophy", "explore, don't exploit"] },
+    { doc: 'novel', phrases: ['Odyssey Venture - Earth Year 2134'] },
+  ]);
+  addEventSmart('VASQUEZ','PARK','shared era / mutual respect', [
+    { doc: 'outline', phrases: ['Ares Prime (2087) and Guardian Sentinel (2089) launched'] },
+    { doc: 'novel', phrases: ['Ares Prime - Earth Year 2087','Guardian Sentinel - Earth Year 2089'] },
+  ]);
+  addEventSmart('VASQUEZ','KAITO','ideology clash', [
+    { doc: 'screenplay', phrases: ['This system is under military jurisdiction','We come in peace'] },
+    { doc: 'outline', phrases: ["explore, don't exploit"] },
+  ]);
+  addEventSmart('KAITO','AL-HAMADI','science exchange / navigation ethics', [
+    { doc: 'outline', phrases: ['Prometheus Array (2103) launched as compromise','Map temporal wake'] },
+  ]);
+  addEventSmart('REEVES','PARK','peacekeeping alignment', [
+    { doc: 'outline', phrases: ['Temporal Peacekeepers'] },
+  ]);
+  addEventSmart('CHEN','PARK','offers neutral ground', [
+    { doc: 'outline', phrases: ['neutral ground'] },
+  ]);
+  addEventSmart('HARTMANN','TCHAIKOVSKY','knowledge exchange', [
+    { doc: 'novel', phrases: ['navigation patterns','Navigator'] },
+  ]);
 
   // Inter-ship relationships between headers with labels
   const H = (s: string) => `${s.replace(/[^A-Za-z0-9]/g,'')}HEAD`;
-  g += `${H('Ares Prime')}--> |ideological pressure| ${H('Odyssey Venture')}\n`;
-  g += `${H('Ares Prime')}--- |coordination| ${H('Guardian Sentinel')}\n`;
-  g += `${H('Celestial Bloom')}--- |neutral ground| ${H('Guardian Sentinel')}\n`;
-  g += `${H('Prometheus Array')}-.-> |warnings / navigation| ${H('Ares Prime')}\n`;
-  g += `${H('Prometheus Array')}-.-> |warnings / navigation| ${H('Odyssey Venture')}\n`;
-  g += `${H('Prometheus Array')}-.-> |warnings / navigation| ${H('Celestial Bloom')}\n`;
+  // Inter-ship relationships via event nodes with links (smart phrases)
+  function addShipEventSmart(fromShip: string, toShip: string, label: string, candidates: Array<{doc: 'screenplay'|'novel'|'outline', phrases: string[] }>) {
+    const eId = `SEV${ev++}`;
+    g += `${eId}["${label}"]:::event\n`;
+    g += `${H(fromShip)}-->${eId}-->${H(toShip)}\n`;
+    for (const c of candidates) {
+      const phrase = findPhrase(c.doc, c.phrases);
+      if (phrase) { g += `click ${eId} "${url(c.doc, phrase)}" "${label} — open ${c.doc}"\n`; return; }
+    }
+  }
+  addShipEventSmart('Ares Prime','Odyssey Venture','ideological pressure', [
+    { doc: 'screenplay', phrases: ['This system is under military jurisdiction','We come in peace'] },
+    { doc: 'outline', phrases: ["explore, don't exploit"] },
+  ]);
+  addShipEventSmart('Ares Prime','Guardian Sentinel','coordination', [
+    { doc: 'outline', phrases: ['Protect colonies','peacekeeping'] },
+  ]);
+  addShipEventSmart('Celestial Bloom','Guardian Sentinel','neutral ground', [
+    { doc: 'outline', phrases: ['neutral ground'] },
+  ]);
+  addShipEventSmart('Prometheus Array','Ares Prime','warnings / navigation', [
+    { doc: 'outline', phrases: ['launched as compromise','Map temporal wake'] },
+  ]);
+  addShipEventSmart('Prometheus Array','Odyssey Venture','warnings / navigation', [
+    { doc: 'outline', phrases: ['navigation'] },
+  ]);
+  addShipEventSmart('Prometheus Array','Celestial Bloom','warnings / navigation', [
+    { doc: 'outline', phrases: ['navigation'] },
+  ]);
 
   // Invisible ordering edges between headers (helps enforce LR chronology)
   for (let i = 0; i < ordered.length - 1; i++) {
@@ -291,16 +358,16 @@ function extractGraph(md: string) {
   return g;
 }
 
-export default function MermaidPage({ combined }: { combined: string }) {
+export default function MermaidPage({ combined, texts }: { combined: string; texts: Record<'screenplay'|'novel'|'outline', string> }) {
   const ref = useRef<HTMLDivElement>(null);
   const [svg, setSvg] = useState('');
   const panInstance = useRef<ReturnType<typeof panzoom> | null>(null);
 
   useEffect(() => {
     mermaid.initialize({ startOnLoad: false, securityLevel: 'loose' });
-    const graph = extractGraph(combined);
+    const graph = extractGraph(combined, texts);
     mermaid.render('mmd', graph).then(({ svg }) => setSvg(svg)).catch((e) => setSvg(`<pre>${String(e)}</pre>`));
-  }, [combined]);
+  }, [combined, texts]);
 
   useEffect(() => {
     // Initialize panzoom after SVG mounts
@@ -348,8 +415,9 @@ export default function MermaidPage({ combined }: { combined: string }) {
 }
 
 export async function getServerSideProps() {
-  const contents = await Promise.all(docs.map(d => fs.readFile(d.path, 'utf8').catch(() => '')));
-  return { props: { combined: contents.join('\n\n') } };
+  const entries = await Promise.all(docs.map(async d => ({ id: d.id, text: await fs.readFile(d.path, 'utf8').catch(() => '') })));
+  const texts = entries.reduce((acc, e) => { (acc as any)[e.id] = e.text; return acc; }, {} as Record<'screenplay'|'novel'|'outline', string>);
+  return { props: { combined: Object.values(texts).join('\n\n'), texts } };
 }
 
 

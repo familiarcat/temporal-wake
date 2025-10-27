@@ -11,9 +11,10 @@ type Props = {
   mode: 'raw' | 'basic' | 'styled';
   content: string;
   html?: string;
+  q: string | null;
 };
 
-export default function DocPage({ doc, mode, content, html: htmlContent }: Props) {
+export default function DocPage({ doc, mode, content, html: htmlContent, q }: Props) {
   const styledClass = (() => {
     if (mode !== 'styled') return 'container';
     if (doc.id === 'screenplay') return 'container prose screenplay-prose';
@@ -23,6 +24,9 @@ export default function DocPage({ doc, mode, content, html: htmlContent }: Props
 
   // Attach screenplay enhancer only in styled screenplay mode
   useScreenplayEnhancer(mode === 'styled' && doc.id === 'screenplay');
+
+  // Optional search highlight and autoscroll
+  useHighlightAndScroll(q ?? undefined);
 
   return (
     <main className={styledClass}>
@@ -142,9 +146,46 @@ export function useScreenplayEnhancer(enabled: boolean) {
   }, [enabled]);
 }
 
+// Highlight occurrences of a query string and scroll to first
+function useHighlightAndScroll(query?: string) {
+  useEffect(() => {
+    if (!query) return;
+    const root = document.getElementById('doc-article');
+    if (!root) return;
+    const q = query.trim();
+    if (!q) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const ranges: Range[] = [];
+    const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    while (walker.nextNode()) {
+      const node = walker.currentNode as Text;
+      const text = node.nodeValue || '';
+      let m: RegExpExecArray | null;
+      re.lastIndex = 0;
+      while ((m = re.exec(text))) {
+        const r = document.createRange();
+        r.setStart(node, m.index);
+        r.setEnd(node, m.index + m[0].length);
+        ranges.push(r);
+      }
+    }
+    ranges.forEach((r) => {
+      const span = document.createElement('mark');
+      span.style.background = '#fde68a';
+      span.style.padding = '0 2px';
+      r.surroundContents(span);
+    });
+    if (ranges.length) {
+      const el = (ranges[0].startContainer.parentElement || root) as HTMLElement;
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [query]);
+}
+
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const id = String(ctx.params?.doc || '');
   const modeParam = String(ctx.query.mode || 'basic');
+  const q = ctx.query.q ? String(ctx.query.q) : null;
   const mode = (['raw', 'basic', 'styled'] as const).includes(modeParam as any)
     ? (modeParam as Props['mode'])
     : 'basic';
@@ -158,11 +199,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const mdSource = await fs.readFile(mdPath, 'utf8');
 
   if (mode === 'raw') {
-    return { props: { doc, mode, content: mdSource } };
+    return { props: { doc, mode, content: mdSource, q } };
   }
 
   const processed = await remark().use(html).process(mdSource);
   const htmlContent = String(processed);
-  return { props: { doc, mode, content: mdSource, html: htmlContent } };
+  return { props: { doc, mode, content: mdSource, html: htmlContent, q } };
 };
 
