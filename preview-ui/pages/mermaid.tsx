@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import mermaid from 'mermaid';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import panzoom from 'panzoom';
 
 type Doc = { id: 'screenplay'|'novel'|'outline'; title: string; path: string };
 const docs: Doc[] = [
@@ -59,14 +60,31 @@ function extractGraph(md: string) {
 
   // Build Mermaid graph
   let g = 'graph TD\n';
-  g += 'classDef ares fill:#f8d7da,stroke:#b02a37,color:#111,font-weight:bold\n';
-  g += 'classDef guardian fill:#d1e7dd,stroke:#0f5132,color:#111\n';
-  g += 'classDef odyssey fill:#e7f1ff,stroke:#084298,color:#111\n';
-  g += 'classDef bloom fill:#f0f9f0,stroke:#2d6a4f,color:#111\n';
-  g += 'classDef prometheus fill:#efeafe,stroke:#5a189a,color:#111\n';
+  // Ship header (political/temporal status) and crew (equal roles) color classes
+  g += 'classDef aresHeader fill:#7f1d1d,stroke:#b91c1c,color:#fff,stroke-width:3px\n';
+  g += 'classDef aresCrew fill:#fecaca,stroke:#b91c1c,color:#111\n';
+  g += 'classDef guardianHeader fill:#0f5132,stroke:#0f5132,color:#fff,stroke-width:3px\n';
+  g += 'classDef guardianCrew fill:#d1e7dd,stroke:#0f5132,color:#111\n';
+  g += 'classDef odysseyHeader fill:#084298,stroke:#084298,color:#fff,stroke-width:3px\n';
+  g += 'classDef odysseyCrew fill:#e7f1ff,stroke:#084298,color:#111\n';
+  g += 'classDef bloomHeader fill:#2d6a4f,stroke:#2d6a4f,color:#fff,stroke-width:3px\n';
+  g += 'classDef bloomCrew fill:#eaf4e0,stroke:#2d6a4f,color:#111\n';
+  g += 'classDef promHeader fill:#5a189a,stroke:#5a189a,color:#fff,stroke-width:3px\n';
+  g += 'classDef promCrew fill:#efeafe,stroke:#5a189a,color:#111\n';
 
-  const classes: Record<string,string> = {
-    'Ares Prime':'ares', 'Guardian Sentinel':'guardian', 'Odyssey Venture':'odyssey', 'Celestial Bloom':'bloom', 'Prometheus Array':'prometheus'
+  const headerClass: Record<string,string> = {
+    'Ares Prime':'aresHeader', 'Guardian Sentinel':'guardianHeader', 'Odyssey Venture':'odysseyHeader', 'Celestial Bloom':'bloomHeader', 'Prometheus Array':'promHeader'
+  };
+  const crewClass: Record<string,string> = {
+    'Ares Prime':'aresCrew', 'Guardian Sentinel':'guardianCrew', 'Odyssey Venture':'odysseyCrew', 'Celestial Bloom':'bloomCrew', 'Prometheus Array':'promCrew'
+  };
+  const clusterStyle: Record<string,string> = {
+    // Subgraph backgrounds to reflect temporal/political origin
+    'Ares Prime': 'fill:#fde8e8,stroke:#b91c1c,color:#111,stroke-width:1px',
+    'Guardian Sentinel': 'fill:#eaf4ef,stroke:#0f5132,color:#111,stroke-width:1px',
+    'Odyssey Venture': 'fill:#eef4ff,stroke:#084298,color:#111,stroke-width:1px',
+    'Celestial Bloom': 'fill:#f3faef,stroke:#2d6a4f,color:#111,stroke-width:1px',
+    'Prometheus Array': 'fill:#f5e9ff,stroke:#5a189a,color:#111,stroke-width:1px'
   };
   for (const [ship, meta] of Object.entries(ships)) {
     const sgId = ship.replace(/[^A-Za-z0-9]/g,'');
@@ -75,12 +93,15 @@ function extractGraph(md: string) {
     g += 'direction TB\n';
     const mission = meta.mission.replace(/\"/g, '');
     // Prominent ship header node with mission line, styled by ship color; thicker border
-    g += `${headId}["${ship}\\n${mission}"]:::${classes[ship]}\n`;
+    g += `${headId}["${ship}\\n${mission}"]:::${headerClass[ship]}\n`;
     meta.crew.forEach(({ name, role }) => {
       const nodeId = name.replace(/[^A-Za-z0-9]/g,'');
       const safeRole = role.replace(/\"/g, '');
-      g += `${nodeId}["${name}\\n${safeRole}"]:::${classes[ship]}\n`;
+      // Crew uses equal color within ship to reflect equal roles
+      g += `${nodeId}["${name}\\n${safeRole}"]:::${crewClass[ship]}\n`;
     });
+    // Style the subgraph background to differentiate temporal origins
+    g += `style ${sgId} ${clusterStyle[ship]}\n`;
     g += 'end\n';
     // header → leader → crew
     const leader = meta.crew.find(c => c.leader);
@@ -92,8 +113,7 @@ function extractGraph(md: string) {
         g += `${lid}-->${cid}\n`;
       });
     }
-    // Emphasize header
-    g += `style ${headId} stroke-width:3px\n`;
+    // Header already emphasized via class
   }
 
   // Character-level interactions (kept minimal)
@@ -120,6 +140,7 @@ function extractGraph(md: string) {
 export default function MermaidPage({ combined }: { combined: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [svg, setSvg] = useState('');
+  const panInstance = useRef<ReturnType<typeof panzoom> | null>(null);
 
   useEffect(() => {
     mermaid.initialize({ startOnLoad: false, securityLevel: 'loose' });
@@ -127,10 +148,46 @@ export default function MermaidPage({ combined }: { combined: string }) {
     mermaid.render('mmd', graph).then(({ svg }) => setSvg(svg)).catch((e) => setSvg(`<pre>${String(e)}</pre>`));
   }, [combined]);
 
+  useEffect(() => {
+    // Initialize panzoom after SVG mounts
+    const container = ref.current;
+    if (!container) return;
+    const svgEl = container.querySelector('svg');
+    if (!svgEl) return;
+    // Destroy any prior instance
+    panInstance.current?.dispose?.();
+    panInstance.current = panzoom(svgEl as SVGSVGElement, {
+      maxZoom: 3,
+      minZoom: 0.2,
+      smoothScroll: false,
+      bounds: false,
+      zoomDoubleClickSpeed: 1,
+    });
+    return () => {
+      panInstance.current?.dispose?.();
+      panInstance.current = null;
+    };
+  }, [svg]);
+
   return (
     <main className="container">
       <h1>Character / Ship Map</h1>
-      <div ref={ref} dangerouslySetInnerHTML={{ __html: svg }} />
+      <div className="no-print" style={{display:'flex', gap:8, marginBottom:8}}>
+        <button onClick={() => panInstance.current?.zoomTo(0,0, 1.1)}>+</button>
+        <button onClick={() => panInstance.current?.zoomTo(0,0, 0.9)}>-</button>
+        <button onClick={() => panInstance.current?.moveTo(0,0)}>Reset</button>
+        <button onClick={() => {
+          const el = ref.current?.querySelector('svg');
+          if (!el) return;
+          // Fit: center and scale to container width
+          const box = el.getBBox();
+          const container = ref.current!.getBoundingClientRect();
+          const scale = Math.min(container.width / (box.width + 40), container.height ? container.height / (box.height + 40) : 1);
+          panInstance.current?.zoomAbs(0,0, Math.max(0.1, Math.min(2, scale)));
+          panInstance.current?.moveTo(0,0);
+        }}>Fit</button>
+      </div>
+      <div ref={ref} dangerouslySetInnerHTML={{ __html: svg }} style={{border:'1px solid #e5e7eb', overflow:'hidden'}} />
       <p className="no-print" style={{marginTop:'1rem'}}>Derived from the three Markdown sources (heuristic). We can refine rules as we iterate.</p>
     </main>
   );
