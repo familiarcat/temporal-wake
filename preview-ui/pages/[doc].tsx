@@ -63,7 +63,24 @@ export function useScreenplayEnhancer(enabled: boolean) {
     const sceneRe = /^(\s*)(INT\.|EXT\.|INT\/EXT\.|EST\.)\b/i;
     const transitionRe = /:\s*$/; // e.g., CUT TO:
     const cueRe = /^[A-Z0-9 .,'\-()]{2,60}$/; // character cue heuristic (allow slightly longer cues)
-    const speakerInlineRe = /^\s*([A-Z][A-Z0-9 .,'\-]+)(\s*\([^)]*\))?(\s+.+)$/; // e.g., WEBB (ON SCREEN) Hello...
+    // e.g., WEBB (ON SCREEN) Hello...  |  DR. WEBB (V.O.) — text
+    const speakerInlineRe = /^\s*([A-Z][A-Z0-9 .,'’\-]+?)(\s*\([^)]*\))?(?:\s*[:\-–—])?\s+(.+)$/;
+
+    // Collect known character names from cue and inline speaker forms
+    const names = new Set<string>();
+    paragraphs.forEach((p) => {
+      const t = (p.textContent || '').trim();
+      if (cueRe.test(t) && t === t.toUpperCase() && t.length <= 60) {
+        names.add(t.replace(/\([^)]*\)/g, '').trim());
+      } else {
+        const m = t.match(speakerInlineRe);
+        if (m) {
+          const n = (m[1] || '').trim();
+          if (n && n === n.toUpperCase() && n.length <= 60) names.add(n);
+        }
+      }
+    });
+    const nameRegexes = Array.from(names).map((n) => new RegExp(`\\b${n.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')}\\b`, 'g'));
     let state: 'none' | 'scene' | 'cue' | 'parenth' = 'none';
     paragraphs.forEach((p) => {
       const txt = p.textContent || '';
@@ -84,16 +101,26 @@ export function useScreenplayEnhancer(enabled: boolean) {
       } else if (isParentheticalLine) {
         p.classList.add('sc-parenth');
         state = 'parenth';
-      } else if (!sceneRe.test(txt) && speakerInlineRe.test(txt)) {
-        // Inline speaker format: NAME (PAREN) dialogue...
-        const m = txt.match(speakerInlineRe)!;
-        const name = (m[1] || '').trim();
-        const paren = (m[2] || '').replace(/\(([^)]+)\)/g, '<em>($1)</em>');
-        const rest = m[3] || '';
-        p.innerHTML = `<strong>${name}</strong>${paren}${rest}`;
-        p.classList.add('sc-dialogue');
-        state = 'cue';
-        return; // already fully rewritten
+      } else if (!sceneRe.test(txt)) {
+        // Inline speaker with dialogue on same line
+        const m = txt.match(speakerInlineRe);
+        if (m) {
+          const name = (m[1] || '').trim();
+          // confirm this is really a cue-ish token (mostly uppercase and short)
+          if (name === name.toUpperCase() && name.length <= 40) {
+            const parenRaw = (m[2] || '');
+            const paren = parenRaw.replace(/\(([^)]+)\)/g, '<em>($1)</em>');
+            const rest = m[3] || '';
+            p.innerHTML = `<strong>${name}</strong>${paren} ${rest}`;
+            p.classList.add('sc-dialogue');
+            state = 'cue';
+            return; // already rewritten
+          }
+        }
+      }
+      // Bold any known character names in non-cue lines
+      if (!p.classList.contains('sc-line') && !p.classList.contains('sc-cue')) {
+        nameRegexes.forEach((re) => { html = html.replace(re, (m) => `<strong>${m}</strong>`); });
       }
       p.innerHTML = html;
 

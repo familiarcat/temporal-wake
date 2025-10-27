@@ -6,6 +6,9 @@ export default function Home() {
     <main className="container">
       <h1>Temporal Wake Preview</h1>
       <p>Select a document and rendering style:</p>
+      <p>
+        Also see the <a href="/mermaid">Character/Ship Mermaid Map</a>.
+      </p>
       <ul>
         {docs.map((d) => (
           <li key={d.id}>
