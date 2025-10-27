@@ -12,3 +12,49 @@ ul{ line-height: 1.7; }
 a{ color: #2563eb; text-decoration: none; }
 a:hover{ text-decoration: underline; }
 
+/* Toolbar */
+.toolbar{ display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1rem; }
+.toolbar button{ padding:.5rem .75rem; border:1px solid var(--border); background:#f8fafc; cursor:pointer; border-radius:6px; }
+.toolbar button:hover{ background:#eef2f7; }
+
+/* Print controls */
+@media print { .no-print{ display:none !important; } }
+
+/* Screenplay traditional look */
+.screenplay-prose{
+  max-width: 6.5in; /* screenplay page width */
+  font-family: "Courier New", Courier, monospace;
+}
+.screenplay-prose h1, .screenplay-prose h2, .screenplay-prose h3{
+  text-align:center; letter-spacing:.04em;
+}
+.screenplay-prose article p{
+  margin: 0 0 0.9rem 0;
+}
+.screenplay-prose .sc-line{ margin-top: 1.1rem; }
+.screenplay-prose .sc-cue{ margin-top: 0.9rem; }
+.screenplay-prose .sc-parenth em{ font-style: italic; }
+.screenplay-prose .sc-dialogue{ margin-left: 1.2in; margin-right: 1.2in; }
+.screenplay-prose .sc-env{ color: #0f172a; font-style: italic; }
+.screenplay-prose .sc-action{ color: #0f172a; }
+
+/* Optional subtle emphasis differences for readability */
+.screenplay-prose .sc-env{ opacity: 0.95; }
+.screenplay-prose .sc-action{ opacity: 0.9; }
+
+/* Novel traditional look */
+.novel-prose{
+  max-width: 72ch;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.novel-prose article p{
+  margin: 0 0 1em; text-indent: 1.25em;
+}
+.novel-prose article h2 + p,
+.novel-prose article h3 + p,
+.novel-prose article h4 + p{
+  text-indent: 0;
+}
+
+/* Outline just uses default prose */
+

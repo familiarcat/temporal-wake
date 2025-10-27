@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { GetServerSideProps } from 'next';
+import { useEffect } from 'react';
 import { docs, DocEntry } from '../src/docs';
 import { remark } from 'remark';
 import html from 'remark-html';
@@ -13,10 +14,27 @@ type Props = {
 };
 
 export default function DocPage({ doc, mode, content, html: htmlContent }: Props) {
+  const styledClass = (() => {
+    if (mode !== 'styled') return 'container';
+    if (doc.id === 'screenplay') return 'container prose screenplay-prose';
+    if (doc.id === 'novel') return 'container prose novel-prose';
+    return 'container prose outline-prose';
+  })();
+
+  // Attach screenplay enhancer only in styled screenplay mode
+  useScreenplayEnhancer(mode === 'styled' && doc.id === 'screenplay');
+
   return (
-    <main className={mode === 'styled' ? 'container prose' : 'container'}>
-      <h1>{doc.title}</h1>
-      <p>
+    <main className={styledClass}>
+      <div className="toolbar no-print">
+        <h1>{doc.title}</h1>
+        {mode === 'styled' && (
+          <button onClick={() => window.print()} title="Export PDF">
+            Export PDF
+          </button>
+        )}
+      </div>
+      <p className="no-print">
         Viewing <strong>{doc.title}</strong> as <em>{mode}</em>
       </p>
       {mode === 'raw' && (
@@ -25,10 +43,76 @@ export default function DocPage({ doc, mode, content, html: htmlContent }: Props
         </pre>
       )}
       {mode !== 'raw' && (
-        <article dangerouslySetInnerHTML={{ __html: htmlContent || '' }} />
+        <article id="doc-article" dangerouslySetInnerHTML={{ __html: htmlContent || '' }} />
       )}
     </main>
   );
+}
+
+// Enhance screenplay readability with lightweight client-side formatting
+// - Bold scene headings (INT./EXT./EST.) and transitions (CUT TO:, etc.)
+// - Bold character cues (ALL CAPS short lines)
+// - Italicize parentheticals (...)
+// Runs only in styled screenplay mode
+export function useScreenplayEnhancer(enabled: boolean) {
+  useEffect(() => {
+    if (!enabled) return;
+    const root = document.getElementById('doc-article');
+    if (!root) return;
+    const paragraphs = Array.from(root.querySelectorAll('p')) as HTMLParagraphElement[];
+    const sceneRe = /^(\s*)(INT\.|EXT\.|INT\/EXT\.|EST\.)\b/i;
+    const transitionRe = /:\s*$/; // e.g., CUT TO:
+    const cueRe = /^[A-Z0-9 .,'\-()]{2,60}$/; // character cue heuristic (allow slightly longer cues)
+    const speakerInlineRe = /^\s*([A-Z][A-Z0-9 .,'\-]+)(\s*\([^)]*\))?(\s+.+)$/; // e.g., WEBB (ON SCREEN) Hello...
+    let state: 'none' | 'scene' | 'cue' | 'parenth' = 'none';
+    paragraphs.forEach((p) => {
+      const txt = p.textContent || '';
+      let html = p.innerHTML;
+      // Parentheticals -> italic
+      const isParentheticalLine = /^\s*\([^)]*\)\s*$/.test(txt);
+      html = html.replace(/\(([^)]+)\)/g, '<em>($1)</em>');
+      // Scene headings & transitions -> bold
+      if (sceneRe.test(txt) || transitionRe.test(txt.trim())) {
+        html = `<strong>${html}</strong>`;
+        p.classList.add('sc-line');
+        state = 'scene';
+      } else if (cueRe.test(txt.trim()) && txt.trim() === txt.trim().toUpperCase() && txt.trim().length <= 40) {
+        // Character cue -> bold
+        html = `<strong>${html}</strong>`;
+        p.classList.add('sc-cue');
+        state = 'cue';
+      } else if (isParentheticalLine) {
+        p.classList.add('sc-parenth');
+        state = 'parenth';
+      } else if (!sceneRe.test(txt) && speakerInlineRe.test(txt)) {
+        // Inline speaker format: NAME (PAREN) dialogue...
+        const m = txt.match(speakerInlineRe)!;
+        const name = (m[1] || '').trim();
+        const paren = (m[2] || '').replace(/\(([^)]+)\)/g, '<em>($1)</em>');
+        const rest = m[3] || '';
+        p.innerHTML = `<strong>${name}</strong>${paren}${rest}`;
+        p.classList.add('sc-dialogue');
+        state = 'cue';
+        return; // already fully rewritten
+      }
+      p.innerHTML = html;
+
+      // Classify remaining narrative vs dialogue
+      if (!p.classList.contains('sc-line') && !p.classList.contains('sc-cue') && !p.classList.contains('sc-parenth')) {
+        if (state === 'cue' || state === 'parenth') {
+          p.classList.add('sc-dialogue');
+          state = 'cue';
+        } else if (state === 'scene') {
+          p.classList.add('sc-env'); // environmental description after scene
+        } else {
+          p.classList.add('sc-action'); // default to action lines
+        }
+      }
+
+      // Reset state on empty lines
+      if (txt.trim() === '') state = 'none';
+    });
+  }, [enabled]);
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {

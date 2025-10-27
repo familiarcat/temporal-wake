@@ -1,7 +1,7 @@
 # TEMPORAL WAKE
 ## A Novel
 
-**By:** [Author Name]
+**By:** P. Brady Georgen
 
 ---
 

@@ -1,0 +1,132 @@
+name: Alex AI Triage
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+  pull_request:
+    types: [opened, edited, reopened, ready_for_review]
+  issue_comment:
+    types: [created]
+  schedule:
+    - cron: '0 9 * * *' # daily at 09:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Triage with Alex and apply updates
+        uses: actions/github-script@v7
+        env:
+          ALEX_API_URL: ${{ secrets.ALEX_API_URL }}
+          ALEX_API_KEY: ${{ secrets.ALEX_API_KEY }}
+        with:
+          script: |
+            const { context, github } = require('@actions/github');
+
+            const hasSecrets = !!(process.env.ALEX_API_URL && process.env.ALEX_API_KEY);
+
+            // Build minimal payload for Alex
+            const payload = {
+              eventName: context.eventName,
+              repo: context.repo,
+              delivery: process.env.GITHUB_RUN_ID,
+              sender: context.payload.sender?.login,
+              issue: context.payload.issue ? {
+                number: context.payload.issue.number,
+                title: context.payload.issue.title,
+                body: context.payload.issue.body || '',
+                labels: (context.payload.issue.labels || []).map(l => typeof l === 'string' ? l : l.name),
+                state: context.payload.issue.state,
+                isPullRequest: !!context.payload.issue.pull_request
+              } : undefined,
+              pull_request: context.payload.pull_request ? {
+                number: context.payload.pull_request.number,
+                title: context.payload.pull_request.title,
+                body: context.payload.pull_request.body || '',
+                labels: (context.payload.pull_request.labels || []).map(l => typeof l === 'string' ? l : l.name),
+                state: context.payload.pull_request.state,
+                draft: !!context.payload.pull_request.draft
+              } : undefined,
+              comment: context.payload.comment ? {
+                body: context.payload.comment.body || ''
+              } : undefined
+            };
+
+            let alex = { labels: [], milestone: null, dryRun: true };
+            if (hasSecrets) {
+              try {
+                const res = await fetch(process.env.ALEX_API_URL, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${process.env.ALEX_API_KEY}`
+                  },
+                  body: JSON.stringify(payload)
+                });
+                if (!res.ok) {
+                  core.warning(`Alex API returned ${res.status}`);
+                } else {
+                  alex = await res.json();
+                }
+              } catch (e) {
+                core.warning(`Alex API error: ${e.message}`);
+              }
+            } else {
+              core.info('ALEX_API_URL/ALEX_API_KEY not set; running in dry-run.');
+            }
+
+            // Determine target number
+            const num = context.payload.issue?.number || context.payload.pull_request?.number;
+            if (!num) {
+              core.info('No issue/PR in this event; skipping.');
+              return;
+            }
+
+            // Apply labels
+            if (alex.labels && alex.labels.length) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: num,
+                labels: alex.labels
+              }).catch(e => core.warning(`addLabels failed: ${e.message}`));
+            }
+
+            // Apply milestone by title (create if missing)
+            if (alex.milestone && typeof alex.milestone === 'string') {
+              const list = await github.rest.issues.listMilestones({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open'
+              });
+              let ms = list.data.find(m => m.title === alex.milestone);
+              if (!ms) {
+                try {
+                  const created = await github.rest.issues.createMilestone({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    title: alex.milestone
+                  });
+                  ms = created.data;
+                } catch (e) {
+                  core.warning(`createMilestone failed: ${e.message}`);
+                }
+              }
+              if (ms) {
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: num,
+                  milestone: ms.number
+                }).catch(e => core.warning(`assign milestone failed: ${e.message}`));
+              }
+            }
+

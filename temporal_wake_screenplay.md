@@ -1,8 +1,8 @@
 # TEMPORAL WAKE
 ## Screenplay
 
-**Written by:** [Author Name]  
-**Based on original concept by:** [Your Name]
+**Written by:** P. Brady Georgen  
+**Based on original concept by:** P. Brady Georgen
 
 **Format:** Feature Film or Limited Series (8 Episodes)  
 **Genre:** Science Fiction, Drama  
