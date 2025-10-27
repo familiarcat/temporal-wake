@@ -68,6 +68,29 @@ function extractGraph(md: string) {
     }
   };
 
+  // Derive launch years dynamically from markdown (fallback to defaults)
+  function escapeReg(s: string) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+  function deriveLaunch(mdText: string, shipName: string, fallback: number) {
+    const esc = escapeReg(shipName);
+    const patterns = [
+      new RegExp(`${esc}\\s*-\\s*Earth\\s+Year\\s+(\\d{4})`, 'i'), // "Ares Prime - Earth Year 2087"
+      new RegExp(`${esc}[^\n]*\\((\\d{4})\\)`, 'i'),               // "Ares Prime (2087)"
+      new RegExp(`${esc}[^\n]*\\blaunch(?:ed)?\\s+(\\d{4})`, 'i'),  // "Ares Prime, launched 2087"
+    ];
+    for (const re of patterns) {
+      const m = mdText.match(re);
+      if (m && m[1]) return parseInt(m[1], 10);
+    }
+    return fallback;
+  }
+
+  const shipsWithDerivedLaunch: Record<string, Ship> = Object.fromEntries(
+    Object.entries(ships).map(([name, meta]) => [
+      name,
+      { ...meta, launch: deriveLaunch(md, name, meta.launch) },
+    ]),
+  ) as Record<string, Ship>;
+
   // Build Mermaid graph
   let g = 'graph LR\n';
   // Ship header (political/temporal status) and crew (equal roles) color classes
@@ -81,6 +104,10 @@ function extractGraph(md: string) {
   g += 'classDef bloomCrew fill:#eaf4e0,stroke:#2d6a4f,color:#111\n';
   g += 'classDef promHeader fill:#5a189a,stroke:#5a189a,color:#fff,stroke-width:3px\n';
   g += 'classDef promCrew fill:#efeafe,stroke:#5a189a,color:#111\n';
+  // Lane visuals (nested subgraphs): command / operations / science
+  const laneCmdStyle = 'fill:#fff5f5,stroke:#fecaca,color:#111,stroke-dasharray: 3 3';
+  const laneOpsStyle = 'fill:#f8fafc,stroke:#e2e8f0,color:#111,stroke-dasharray: 3 3';
+  const laneSciStyle = 'fill:#f3f4f6,stroke:#e5e7eb,color:#111,stroke-dasharray: 3 3';
   // Vector badges
   g += 'classDef vectorMil fill:#b91c1c,stroke:#7f1d1d,color:#fff\n';
   g += 'classDef vectorSci fill:#2563eb,stroke:#1d4ed8,color:#fff\n';
@@ -100,8 +127,30 @@ function extractGraph(md: string) {
     'Celestial Bloom': 'fill:#f3faef,stroke:#2d6a4f,color:#111,stroke-width:1px',
     'Prometheus Array': 'fill:#f5e9ff,stroke:#5a189a,color:#111,stroke-width:1px'
   };
+
+  // Palette per ship for gradients (stroke used as max-importance color)
+  const shipStroke: Record<string,string> = {
+    'Ares Prime': '#b91c1c',
+    'Guardian Sentinel': '#0f5132',
+    'Odyssey Venture': '#084298',
+    'Celestial Bloom': '#2d6a4f',
+    'Prometheus Array': '#5a189a',
+  };
+
+  // Color utilities
+  function hexToRgb(hex: string) { const m = hex.replace('#',''); const n = parseInt(m.length===3? m.split('').map(c=>c+c).join(''): m,16); return { r:(n>>16)&255, g:(n>>8)&255, b:n&255 }; }
+  function rgbToHex(r: number, g: number, b: number) { const to = (v:number)=>v.toString(16).padStart(2,'0'); return `#${to(r)}${to(g)}${to(b)}`; }
+  function mixHex(a: string, b: string, t: number) { const A=hexToRgb(a), B=hexToRgb(b); const r=Math.round(A.r+(B.r-A.r)*t); const g=Math.round(A.g+(B.g-A.g)*t); const b2=Math.round(A.b+(B.b-A.b)*t); return rgbToHex(r,g,b2); }
+  function luminance(hex: string) { const {r,g,b}=hexToRgb(hex); const nl=(v:number)=>{v/=255; return v<=0.03928? v/12.92: Math.pow((v+0.055)/1.055,2.4);}; const L=0.2126*nl(r)+0.7152*nl(g)+0.0722*nl(b); return L; }
+  function textForBg(hex: string) { return luminance(hex) > 0.6 ? '#111' : '#fff'; }
+  function mentionCount(text: string, name: string) {
+    const pattern = name.replace(/[-\s]+/g,'[- ]?');
+    const re = new RegExp(`\\b${pattern}\\b`, 'gi');
+    const m = text.match(re);
+    return m ? m.length : 0;
+  }
   // Sort ships by launch year ascending for left-to-right placement
-  const ordered = Object.entries(ships).sort((a,b) => a[1].launch - b[1].launch);
+  const ordered = Object.entries(shipsWithDerivedLaunch).sort((a,b) => a[1].launch - b[1].launch);
   for (const [ship, meta] of ordered) {
     const sgId = ship.replace(/[^A-Za-z0-9]/g,'');
     const headId = `${sgId}HEAD`;
@@ -116,12 +165,65 @@ function extractGraph(md: string) {
     const badgeClass = meta.vector === 'military' ? 'vectorMil' : (meta.vector === 'science' ? 'vectorSci' : 'vectorCol');
     g += `${badgeId}["${badgeLabel}"]:::${badgeClass}\n`;
     g += `${headId}-->${badgeId}\n`;
-    meta.crew.forEach(({ name, role }) => {
+    // Group crew into lanes at departure state
+    const cmd: typeof meta.crew = [];
+    const ops: typeof meta.crew = [];
+    const sci: typeof meta.crew = [];
+    meta.crew.forEach((c) => {
+      const r = c.role.toLowerCase();
+      if (/(admiral|captain|commander|colonel|major|xo)/.test(r)) cmd.push(c);
+      else if (/(tactic|operation|engineer|navigator)/.test(r)) ops.push(c);
+      else sci.push(c); // science, medical, ethics, diplomacy, botanist, historian, physicist
+    });
+
+    // Command lane
+    const laneCmdId = `${sgId}CMD`;
+    g += `subgraph ${laneCmdId}[Command]\n`;
+    g += 'direction LR\n';
+    cmd.forEach(({ name, role }) => {
       const nodeId = name.replace(/[^A-Za-z0-9]/g,'');
       const safeRole = role.replace(/\"/g, '');
-      // Crew uses equal color within ship to reflect equal roles
       g += `${nodeId}["${name}\\n${safeRole}"]:::${crewClass[ship]}\n`;
     });
+    g += 'end\n';
+    g += `style ${laneCmdId} ${laneCmdStyle}\n`;
+
+    // Operations / Tactics lane
+    const laneOpsId = `${sgId}OPS`;
+    g += `subgraph ${laneOpsId}[Operations / Tactics]\n`;
+    g += 'direction LR\n';
+    ops.forEach(({ name, role }) => {
+      const nodeId = name.replace(/[^A-Za-z0-9]/g,'');
+      const safeRole = role.replace(/\"/g, '');
+      g += `${nodeId}["${name}\\n${safeRole}"]:::${crewClass[ship]}\n`;
+    });
+    g += 'end\n';
+    g += `style ${laneOpsId} ${laneOpsStyle}\n`;
+
+    // Science / Medical / Diplomacy lane
+    const laneSciId = `${sgId}SCI`;
+    g += `subgraph ${laneSciId}[Science / Medical / Diplomacy]\n`;
+    g += 'direction LR\n';
+    sci.forEach(({ name, role }) => {
+      const nodeId = name.replace(/[^A-Za-z0-9]/g,'');
+      const safeRole = role.replace(/\"/g, '');
+      g += `${nodeId}["${name}\\n${safeRole}"]:::${crewClass[ship]}\n`;
+    });
+    g += 'end\n';
+    g += `style ${laneSciId} ${laneSciStyle}\n`;
+    // Compute importance gradient per crew within this ship
+    const counts = meta.crew.map(c => mentionCount(md, c.name) + (c.leader ? 2 : 0));
+    const max = Math.max(1, ...counts);
+    const min = Math.min(...counts);
+    meta.crew.forEach((c, idx) => {
+      const nodeId = c.name.replace(/[^A-Za-z0-9]/g,'');
+      const norm = max === min ? 0.5 : (counts[idx] - min) / (max - min);
+      const t = Math.max(0.15, Math.min(0.95, Math.pow(norm, 0.8))); // bias toward mid tones
+      const fill = mixHex('#ffffff', shipStroke[ship], t);
+      const label = textForBg(fill);
+      g += `style ${nodeId} fill:${fill},stroke:${shipStroke[ship]},color:${label}\n`;
+    });
+
     // Style the subgraph background to differentiate temporal origins
     g += `style ${sgId} ${clusterStyle[ship]}\n`;
     g += 'end\n';
