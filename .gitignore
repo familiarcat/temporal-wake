@@ -1,0 +1,9 @@
+preview-ui/node_modules/
+preview-ui/.next/
+preview-ui/.turbo/
+*.log
+.DS_Store
+screenplay.html
+novel.html
+outline.html
+md.css
