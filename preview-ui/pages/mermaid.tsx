@@ -12,12 +12,14 @@ const docs: Doc[] = [
 ];
 
 function extractGraph(md: string) {
-  // Ships with mission headers and hierarchical crew
+  // Ships with mission headers, vector type, and hierarchical crew
   type Crew = { name: string; role: string; leader?: boolean };
-  type Ship = { mission: string; crew: Crew[] };
+  type Ship = { mission: string; launch: number; vector: 'military'|'science'|'colony'; crew: Crew[] };
   const ships: Record<string, Ship> = {
     'Ares Prime': {
       mission: 'Claim strength → mediate peace',
+      launch: 2087,
+      vector: 'military',
       crew: [
         { name: 'VASQUEZ', role: 'Admiral / Commander', leader: true },
         { name: 'WEBB', role: 'Physicist → Redemption' },
@@ -26,6 +28,8 @@ function extractGraph(md: string) {
     },
     'Guardian Sentinel': {
       mission: 'Protect colonies; peacekeeping',
+      launch: 2089,
+      vector: 'military',
       crew: [
         { name: 'PARK', role: 'Colonel / Command', leader: true },
         { name: 'REEVES', role: 'Major / Tactics' },
@@ -34,6 +38,8 @@ function extractGraph(md: string) {
     },
     'Odyssey Venture': {
       mission: 'Explore; understand; diplomacy-first',
+      launch: 2134,
+      vector: 'science',
       crew: [
         { name: 'KAITO', role: 'Captain / Scientist', leader: true },
         { name: 'OKONKWO', role: 'Chief Engineer' },
@@ -42,6 +48,8 @@ function extractGraph(md: string) {
     },
     'Celestial Bloom': {
       mission: 'Build a home; open colony',
+      launch: 2156,
+      vector: 'colony',
       crew: [
         { name: 'CHEN', role: 'Commander', leader: true },
         { name: 'HARTMANN', role: 'Botanist / Historian' },
@@ -50,6 +58,8 @@ function extractGraph(md: string) {
     },
     'Prometheus Array': {
       mission: 'Map temporal wake; restraint',
+      launch: 2103,
+      vector: 'science',
       crew: [
         { name: 'AL-HAMADI', role: 'Lead Physicist', leader: true },
         { name: 'TCHAIKOVSKY', role: 'Navigator' },
@@ -59,7 +69,7 @@ function extractGraph(md: string) {
   };
 
   // Build Mermaid graph
-  let g = 'graph TD\n';
+  let g = 'graph LR\n';
   // Ship header (political/temporal status) and crew (equal roles) color classes
   g += 'classDef aresHeader fill:#7f1d1d,stroke:#b91c1c,color:#fff,stroke-width:3px\n';
   g += 'classDef aresCrew fill:#fecaca,stroke:#b91c1c,color:#111\n';
@@ -71,6 +81,10 @@ function extractGraph(md: string) {
   g += 'classDef bloomCrew fill:#eaf4e0,stroke:#2d6a4f,color:#111\n';
   g += 'classDef promHeader fill:#5a189a,stroke:#5a189a,color:#fff,stroke-width:3px\n';
   g += 'classDef promCrew fill:#efeafe,stroke:#5a189a,color:#111\n';
+  // Vector badges
+  g += 'classDef vectorMil fill:#b91c1c,stroke:#7f1d1d,color:#fff\n';
+  g += 'classDef vectorSci fill:#2563eb,stroke:#1d4ed8,color:#fff\n';
+  g += 'classDef vectorCol fill:#15803d,stroke:#166534,color:#fff\n';
 
   const headerClass: Record<string,string> = {
     'Ares Prime':'aresHeader', 'Guardian Sentinel':'guardianHeader', 'Odyssey Venture':'odysseyHeader', 'Celestial Bloom':'bloomHeader', 'Prometheus Array':'promHeader'
@@ -86,14 +100,22 @@ function extractGraph(md: string) {
     'Celestial Bloom': 'fill:#f3faef,stroke:#2d6a4f,color:#111,stroke-width:1px',
     'Prometheus Array': 'fill:#f5e9ff,stroke:#5a189a,color:#111,stroke-width:1px'
   };
-  for (const [ship, meta] of Object.entries(ships)) {
+  // Sort ships by launch year ascending for left-to-right placement
+  const ordered = Object.entries(ships).sort((a,b) => a[1].launch - b[1].launch);
+  for (const [ship, meta] of ordered) {
     const sgId = ship.replace(/[^A-Za-z0-9]/g,'');
     const headId = `${sgId}HEAD`;
     g += `subgraph ${sgId}[${ship}]\n`;
     g += 'direction TB\n';
     const mission = meta.mission.replace(/\"/g, '');
-    // Prominent ship header node with mission line, styled by ship color; thicker border
-    g += `${headId}["${ship}\\n${mission}"]:::${headerClass[ship]}\n`;
+    // Include launch year beneath name
+    g += `${headId}["${ship} (${meta.launch})\\n${mission}"]:::${headerClass[ship]}\n`;
+    // Vector badge under header
+    const badgeId = `${sgId}VEC`;
+    const badgeLabel = meta.vector === 'military' ? 'MILITARY' : (meta.vector === 'science' ? 'EXPLORATORY / SCIENCE' : 'COLONIZING');
+    const badgeClass = meta.vector === 'military' ? 'vectorMil' : (meta.vector === 'science' ? 'vectorSci' : 'vectorCol');
+    g += `${badgeId}["${badgeLabel}"]:::${badgeClass}\n`;
+    g += `${headId}-->${badgeId}\n`;
     meta.crew.forEach(({ name, role }) => {
       const nodeId = name.replace(/[^A-Za-z0-9]/g,'');
       const safeRole = role.replace(/\"/g, '');
@@ -120,7 +142,7 @@ function extractGraph(md: string) {
   g += 'WEBB-->KAITO\n';
   g += 'VASQUEZ---PARK\n';
   g += 'VASQUEZ-->KAITO\n';
-  g += 'KAITO---ALHAMADI\n';
+  g += 'KAITO---AL-HAMADI\n';
   g += 'REEVES-->PARK\n';
   g += 'CHEN-->PARK\n';
   g += 'HARTMANN---TCHAIKOVSKY\n';
@@ -133,6 +155,36 @@ function extractGraph(md: string) {
   g += `${H('Prometheus Array')}-.-> |warnings / navigation| ${H('Ares Prime')}\n`;
   g += `${H('Prometheus Array')}-.-> |warnings / navigation| ${H('Odyssey Venture')}\n`;
   g += `${H('Prometheus Array')}-.-> |warnings / navigation| ${H('Celestial Bloom')}\n`;
+
+  // Invisible ordering edges between headers (helps enforce LR chronology)
+  for (let i = 0; i < ordered.length - 1; i++) {
+    const a = ordered[i][0];
+    const b = ordered[i+1][0];
+    g += `${H(a)}-->${H(b)}\n`;
+    // Note: linkStyle indices vary with upstream edges; leaving visible edges is acceptable if layout holds
+  }
+
+  // Legend for vectors and rank meanings
+  g += 'subgraph Legend[Legend]\n';
+  g += 'direction TB\n';
+  g += 'subgraph Legend_Vectors[Vectors]\n';
+  g += 'direction LR\n';
+  g += 'VECMIL["MILITARY: force, deterrence, enforcement"]:::vectorMil\n';
+  g += 'VECSCI["EXPLORATORY / SCIENCE: understanding, navigation, ethics"]:::vectorSci\n';
+  g += 'VECCOL["COLONIZING: settlement, care, culture"]:::vectorCol\n';
+  g += 'end\n';
+  g += 'subgraph Legend_Ranks[Ranks / Roles]\n';
+  g += 'direction LR\n';
+  g += 'LR1["Admiral / Commander — ship or fleet command"]\n';
+  g += 'LR2["Colonel / Major — tactics and operations"]\n';
+  g += 'LR3["Captain / Commander — vessel command"]\n';
+  g += 'LR4["XO — executive operations / coordination"]\n';
+  g += 'LR5["CMO — medical / wellbeing"]\n';
+  g += 'LR6["First Contact — diplomacy / linguistics"]\n';
+  g += 'LR7["Chief Engineer — systems reliability"]\n';
+  g += 'LR8["Lead Physicist / Navigator / AI Ethics — science core"]\n';
+  g += 'end\n';
+  g += 'end\n';
 
   return g;
 }
