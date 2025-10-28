@@ -113,7 +113,7 @@ export default function MermaidTimelinePage({ combined }: { combined: string }) 
     const svgEl = container.querySelector('svg');
     if (!svgEl) return;
     panInstance.current?.dispose?.();
-    panInstance.current = panzoom(svgEl as SVGSVGElement, { maxZoom: 3, minZoom: 0.2, smoothScroll: false, bounds: false, zoomDoubleClickSpeed: 1 });
+    panInstance.current = panzoom(svgEl as SVGSVGElement, { maxZoom: 10, minZoom: 0.05, smoothScroll: true, bounds: false, zoomDoubleClickSpeed: 1.4 });
     return () => { panInstance.current?.dispose?.(); panInstance.current = null; };
   }, [svg]);
 
@@ -124,8 +124,19 @@ export default function MermaidTimelinePage({ combined }: { combined: string }) 
         <button onClick={() => panInstance.current?.zoomTo(0,0, 1.1)}>+</button>
         <button onClick={() => panInstance.current?.zoomTo(0,0, 0.9)}>-</button>
         <button onClick={() => panInstance.current?.moveTo(0,0)}>Reset</button>
+        <button onClick={() => panInstance.current?.zoomAbs(0,0,1)}>100%</button>
+        <button onClick={() => {
+          const container = ref.current as HTMLElement | null;
+          if (!container) return;
+          const anyEl: any = container;
+          if (document.fullscreenElement) {
+            document.exitFullscreen?.();
+          } else {
+            (anyEl.requestFullscreen || anyEl.webkitRequestFullscreen || anyEl.msRequestFullscreen)?.call(anyEl);
+          }
+        }}>Fullscreen</button>
       </div>
-      <div ref={ref} dangerouslySetInnerHTML={{ __html: svg }} style={{border:'1px solid #e5e7eb', overflow:'hidden'}} />
+      <div ref={ref} dangerouslySetInnerHTML={{ __html: svg }} style={{border:'1px solid #e5e7eb', overflow:'hidden', height:'85vh'}} />
       <p className="no-print" style={{marginTop:'1rem'}}>This timeline shows launch chronology (top) and arrival ordering at Kepler 442 (bottom). Dotted edges indicate temporal displacement.</p>
     </main>
   );

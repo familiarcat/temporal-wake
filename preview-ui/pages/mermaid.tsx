@@ -415,11 +415,11 @@ export default function MermaidPage({ combined, texts }: { combined: string; tex
     // Destroy any prior instance
     panInstance.current?.dispose?.();
     panInstance.current = panzoom(svgEl as SVGSVGElement, {
-      maxZoom: 3,
-      minZoom: 0.2,
-      smoothScroll: false,
+      maxZoom: 10,
+      minZoom: 0.05,
+      smoothScroll: true,
       bounds: false,
-      zoomDoubleClickSpeed: 1,
+      zoomDoubleClickSpeed: 1.4,
     });
     return () => {
       panInstance.current?.dispose?.();
@@ -444,8 +444,19 @@ export default function MermaidPage({ combined, texts }: { combined: string; tex
           panInstance.current?.zoomAbs(0,0, Math.max(0.1, Math.min(2, scale)));
           panInstance.current?.moveTo(0,0);
         }}>Fit</button>
+        <button onClick={() => panInstance.current?.zoomAbs(0,0,1)}>100%</button>
+        <button onClick={() => {
+          const container = ref.current as HTMLElement | null;
+          if (!container) return;
+          const anyEl: any = container;
+          if (document.fullscreenElement) {
+            document.exitFullscreen?.();
+          } else {
+            (anyEl.requestFullscreen || anyEl.webkitRequestFullscreen || anyEl.msRequestFullscreen)?.call(anyEl);
+          }
+        }}>Fullscreen</button>
       </div>
-      <div ref={ref} dangerouslySetInnerHTML={{ __html: svg }} style={{border:'1px solid #e5e7eb', overflow:'hidden'}} />
+      <div ref={ref} dangerouslySetInnerHTML={{ __html: svg }} style={{border:'1px solid #e5e7eb', overflow:'hidden', height:'85vh'}} />
       <p className="no-print" style={{marginTop:'1rem'}}>Derived from the three Markdown sources (heuristic). We can refine rules as we iterate.</p>
     </main>
   );
