@@ -46,9 +46,19 @@ function extractTimelineGraph(md: string) {
   ) as Record<string, Ship>;
 
   let g = 'graph LR\n';
-  // Basic styles
-  g += 'classDef header fill:#111827,stroke:#374151,color:#fff,stroke-width:2px\n';
-  g += 'classDef event fill:#fff7ed,stroke:#c2410c,color:#111,stroke-dasharray: 2 2\n';
+  // Ship color theory (match Character/Ship Map)
+  g += 'classDef aresHeader fill:#7f1d1d,stroke:#b91c1c,color:#fff,stroke-width:3px\n';
+  g += 'classDef guardianHeader fill:#0f5132,stroke:#0f5132,color:#fff,stroke-width:3px\n';
+  g += 'classDef odysseyHeader fill:#084298,stroke:#084298,color:#fff,stroke-width:3px\n';
+  g += 'classDef bloomHeader fill:#2d6a4f,stroke:#2d6a4f,color:#fff,stroke-width:3px\n';
+  g += 'classDef promHeader fill:#5a189a,stroke:#5a189a,color:#fff,stroke-width:3px\n';
+  const headerClass: Record<string,string> = {
+    'Ares Prime':'aresHeader',
+    'Guardian Sentinel':'guardianHeader',
+    'Odyssey Venture':'odysseyHeader',
+    'Celestial Bloom':'bloomHeader',
+    'Prometheus Array':'promHeader',
+  };
 
   // Order by launch
   const ordered = Object.entries(shipsWithDerivedLaunch).sort((a,b) => a[1].launch - b[1].launch);
@@ -60,7 +70,8 @@ function extractTimelineGraph(md: string) {
   g += 'subgraph Launches[Launch Timeline]\n';
   g += 'direction LR\n';
   for (const [ship, meta] of ordered) {
-    g += `${L(ship)}["${ship} (${meta.launch})"]:::header\n`;
+    const cls = headerClass[ship] || 'odysseyHeader';
+    g += `${L(ship)}["${ship} (${meta.launch})"]:::${cls}\n`;
   }
   g += 'end\n';
 
@@ -69,7 +80,8 @@ function extractTimelineGraph(md: string) {
   g += 'subgraph Arrivals[Kepler 442 Arrival]\n';
   g += 'direction LR\n';
   for (const ship of arrivalOrder) {
-    g += `${A(ship)}["${ship} (arrival)"]:::header\n`;
+    const cls = headerClass[ship] || 'odysseyHeader';
+    g += `${A(ship)}["${ship} (arrival)"]:::${cls}\n`;
   }
   g += 'end\n';
 
