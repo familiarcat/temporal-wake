@@ -6,9 +6,13 @@ export default function Home() {
     <main className="container">
       <h1>Temporal Wake Preview</h1>
       <p>Select a document and rendering style:</p>
-      <p>
-        Also see the <a href="/mermaid">Character/Ship Mermaid Map</a>.
-      </p>
+      <div className="no-print" style={{marginBottom: '1rem'}}>
+        <strong>Charts</strong>
+        <ul>
+          <li><a href="/mermaid">Character / Ship Mermaid Map</a></li>
+          <li><a href="/mermaid_timeline">Timeline Map (launch -> arrival)</a></li>
+        </ul>
+      </div>
       <ul>
         {docs.map((d) => (
           <li key={d.id}>
