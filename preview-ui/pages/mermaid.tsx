@@ -22,8 +22,8 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
       vector: 'military',
       crew: [
         { name: 'VASQUEZ', role: 'Admiral / Commander', leader: true },
-        { name: 'WEBB', role: 'Physicist → Redemption' },
-        { name: 'HAYES', role: 'XO / Operations' }
+        { name: 'WEBB', role: 'Physicist → Sacrifice' },
+        { name: 'HAYES', role: 'XO → Commander' }
       ]
     },
     'Guardian Sentinel': {
@@ -32,7 +32,7 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
       vector: 'military',
       crew: [
         { name: 'PARK', role: 'Colonel / Command', leader: true },
-        { name: 'REEVES', role: 'Major / Tactics' },
+        { name: 'REEVES', role: 'Major / Peacekeepers' },
         { name: 'OSEI', role: 'Chaplain / Ethics' }
       ]
     },
@@ -42,7 +42,7 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
       vector: 'science',
       crew: [
         { name: 'KAITO', role: 'Captain / Scientist', leader: true },
-        { name: 'OKONKWO', role: 'Chief Engineer' },
+        { name: 'OKONKWO', role: 'Chief Engineer → First Officer' },
         { name: 'VENKATARAMAN', role: 'First Contact' }
       ]
     },

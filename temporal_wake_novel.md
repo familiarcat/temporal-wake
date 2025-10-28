@@ -1070,6 +1070,43 @@ This time, she did not cut him off. She did not answer either. But Kaito underst
 
 ---
 
+### INTERLUDE: Odyssey Venture — Commons
+#### Voices in a Room With Plants
+
+The commons smelled of basil and machine oil. Okonkwo lay on her back beneath a half‑disassembled recycler, hands black with work, while Venkataraman brewed tea as if diplomacy began at a kettle.
+
+“You’re humming,” Priya said.
+
+“Entropy,” Amara replied. “It hums if you listen.”
+
+Kaito sat cross‑legged on the deck, Webb beside him, both men watching condensation collect and fall from the terrarium dome like rain Earth had promised and sometimes delivered.
+
+“Sagan wrote that we are a way for the cosmos to know itself,” Kaito said. “I think sometimes we’re a way for the cosmos to forgive itself.”
+
+“Forgiveness is a human invention,” Webb said. “Physics offers conservation. Not absolution.”
+
+“Stephen Hawking cheated once,” Priya said, smiling into the steam. “Changed his mind. Science forgives itself by improving.”
+
+Amara slid out, grease on her cheek like war paint. “Tell me the real thing, Captain. If the military ship fires on us, do we run?”
+
+Kaito answered as a scientist and a man. “We show them we are not prey.” He looked at Webb. “And we trust the people who used to build teeth to help us grow a backbone.”
+
+Webb met Amara’s eyes. “I can tune a field to cradle, not crush.” A breath, almost laughter. “Brian Greene would call that string theory with a conscience.”
+
+“Soap opera break,” Priya announced, setting cups down. “Amara, your ex keeps sending you songs.”
+
+Amara rolled her eyes. “Thrusters require less maintenance than feelings.”
+
+“And yet,” Priya said, “both misfire if ignored.” She turned to Kaito. “Will you write to Tomás?”
+
+“Every day,” Kaito said. “Even if the letters take forty‑seven years to arrive.”
+
+The ship hummed its consent. Outside, stars arranged themselves into conversations that would take human lifetimes to complete.
+
+Webb glanced at the engineering readout—numbers across a page like tiny, obedient stars—and felt, for a brief heresy, that the universe might deserve them after all.
+
+---
+
 ### CHAPTER EIGHT
 #### Colonel David Park
 ### Guardian Sentinel – Obsolescence
@@ -1120,6 +1157,43 @@ Her voice did not shake. The math would not permit it.
 
 ---
 
+### INTERLUDE: Ares Prime — Mess Deck
+#### Salt, Metal, and What Passes for Bread
+
+Reeves ate like a metronome—precise bites, impeccable timing, as if nourishment could be scheduled into obedience. Hayes stabbed at protein paste as if it had insulted him. Vasquez drank black coffee because there were no alternatives that did not taste like grief.
+
+“Colonel Webb jumped ship,” Reeves said without looking up.
+
+“Doctor,” Vasquez corrected automatically.
+
+“Doctor,” Reeves allowed. “Defected to a garden.”
+
+Hayes bristled. “He betrayed us.”
+
+“He chose,” Vasquez said. “There’s a difference.”
+
+Reeves watched her over the rim of a tin mug. “Do you ever choose, Admiral? Or do you only refuse?”
+
+“I choose every day,” Vasquez said softly. “I choose which fear to humor.”
+
+“Fear is a parameter,” Reeves said. “So is mercy. You tune for one, you dampen the other.”
+
+“Not always,” Hayes said, surprising himself. “Sometimes the curve bends.”
+
+“Spoken like someone who thinks he’ll command,” Reeves said, not unkindly. “Here’s your first lesson, Lieutenant: people are not polynomials.”
+
+Vasquez stood, coffee gone. “Eat. Rest. We meet the future in an hour, and it will check our math.”
+
+When she left, Hayes traced the rim of his cup like a pilgrim. He thought of Rawls—veil of ignorance—and of how command should feel with the veil on. He thought of his mother teaching him to apologize without excuses and wondered if there were such things as ethical vectors.
+
+When she left, Reeves exhaled. “I do not like that man on the white ship,” she said.
+
+“Kaito?” Hayes asked. “He seems… decent.”
+
+“Exactly,” Reeves said. “Decent men are dangerous. They ask you to admit what you’ve done.”
+
+---
+
 ### CHAPTER TEN
 #### Commander Aria Chen
 ### Celestial Bloom – Neutral Ground
@@ -1143,6 +1217,25 @@ Al‑Hamadi threw the galaxy on the table—lines of stress like hairline fractu
 “Then we learn,” Kaito said.
 
 “Then we decide,” Vasquez said, and no one missed that she used the plural.
+
+---
+
+### INTERLUDE: Celestial Bloom — Orchard Walk
+#### On Soil That Remembers, Under Light That Learns
+
+Dr. Zara Malik held a graft in one hand and a gene map in the other. “We need diversity,” she told Hartmann. “In genomes. In people. In loves.”
+
+“I am too old for loves,” Hartmann said, then blushed at the lie.
+
+Aria joined them, boots quiet on compost. “Command is a triangle,” she said. “Duty, mercy, truth. Today I keep balancing toward mercy and find truth sulking in a corner.”
+
+“Soap opera note,” Malik said, eyes kind. “Your communications officer and our hydroponics lead are fighting about chore charts and kissing between arguments.”
+
+Aria smiled despite herself. “Civilization begins with dishes. Carl Sagan would approve.”
+
+“Sagan would tell you to bake them a pie,” Hartmann said. “He would be right.”
+
+They stood among trees that had never known wind until the ship taught them. Somewhere beyond the hull, fleets made claims. Inside, a young couple set a timer for irrigation and a kiss.
 
 ---
 
@@ -1270,6 +1363,53 @@ Kaito touched the stone last. “We met ourselves,” he said. “May we be wort
 
 ---
 
+### INTERLUDE: Transfers
+#### Who We Become When the Mission Changes
+
+On Ares Prime, Vasquez called Hayes to the viewport where stars were learning their new names.
+
+“You will command,” she said.
+
+He swallowed. “I thought command was a consequence of survival.”
+
+“Sometimes it’s a decision,” she said. “You decide to be the person the ship needs before the ship asks.”
+
+“What if I decide wrong?”
+
+“Then you decide again.” She placed the small metal pin in his palm. It was lighter than the lives it represented.
+
+Reeves watched from tactical, jaw tense. Vasquez turned to her. “Major, I need a skeptic on the Peacekeepers. Park respects force that restrains itself. You understand the math of restraint.”
+
+Reeves looked out at Kepler‑442b, at gardens that did not ask permission to grow. “I have spent my career optimizing casualties I could not see,” she said. “I would like to optimize trust.”
+
+“Then go,” Vasquez said. “Make a strategy for mercy.”
+
+On Odyssey Venture, Kaito found Okonkwo at the engine throat, hand on the housing like a benediction.
+
+“First officer,” he said.
+
+She shook her head. “I am a mechanic with delusions of poetry.”
+
+“Exactly,” he said. “We need both.”
+
+“What if I sing off‑key?”
+
+“Then the universe learns a new key.”
+
+On Celestial Bloom, Chen stood with Hartmann and Malik under the dimmed lamps of ship‑night.
+
+“We’re not just planting,” Chen said. “We’re adopting. Refugees. Soldiers. Historians. People who argue about dishes.”
+
+Malik smiled. “A real colony.”
+
+Hartmann pressed a seed into her palm. “For the stubborn places,” he said. “They need deep roots.”
+
+In the lab on Prometheus Array, Rashida lit a single line of equation on a private screen and then let it go dark. “Not yet,” she told the bright emptiness. “Grow us up first.”
+
+The transfers happened quietly. The universe prefers commitments whispered over shouted.
+
+---
+
 ### CHAPTER SIXTEEN
 #### Departures
 ### Orbits and Vectors – A Choreography
@@ -1335,3 +1475,39 @@ From high above, the wake of departures looked like calligraphy. No single autho
 We are the Temporal Wake, the buoy said without saying. We are what we chose to become.
 
 And the planet turned, generous as ever, providing low places for water and high places for looking and the exact amount of gravity required to keep a city from floating away.
+
+---
+
+## APPENDIX: CHAPTER ARC MAP (STRUCTURE & LENGTH GUIDANCE)
+
+This map ensures each chapter carries a clear interpersonal arc (beginning → turn → decision) and justifies a minimum three‑page read. Chapters marked “Merged” are intended to be read as extended arcs with interludes.
+
+- Part One
+  - Chapter 1 (Vasquez): Duty vs. grief → decision to launch → vow to claim Kepler. Status: Full arc.
+  - Chapter 2 (Webb): Guilt → anomaly wonder → decision to pursue temporal math. Status: Full arc.
+  - Chapter 3 (Park): Duty certainty → mission obsolescence foreshadowed → resolve to proceed. Status: Full arc.
+  - Chapter 4 (Kaito): Hope vs. risk → promise to Tomás → commitment to peaceful first contact. Status: Full arc.
+  - Chapter 5 (Chen): Inherited mission → contested arrival → decision to lead by example. Status: Full arc.
+
+- Part Two (Convergence)
+  - Chapter 6 (Vasquez): First contact stance → hold fire vs. pride → “we won’t fire first.” Status: Full arc.
+  - Interlude: Odyssey Commons (Kaito/Webb/Okonkwo/Venkataraman). Extends Ch. 6 for character interplay. Merged.
+  - Chapter 7 (Kaito): Peace overture → refusal → persistent dialogue strategy. Status: Full arc.
+  - Chapter 8 (Park): Obsolete mission → request for “neighbors” → recalibrated purpose. Status: Full arc.
+  - Chapter 9 (Al‑Hamadi): Catastrophe math → broadcast warning → demand coordination. Status: Full arc.
+  - Interlude: Ares Mess (Vasquez/Reeves/Hayes). Extends Ch. 9 with interpersonal stakes. Merged.
+  - Chapter 10 (Chen): Host summit offer → table set → shared problem recognized. Status: Full arc.
+  - Interlude: Bloom Orchard (Chen/Malik/Hartmann). Extends Ch. 10 with cultural/soap arc. Merged.
+  - Chapter 11 (Webb): Identity choice → defection → embrace repair. Status: Full arc.
+
+- Part Three (Reckoning)
+  - Chapter 12 (Fleets): Claim vs. commons → rule‑need realization. Status: Full arc.
+  - Chapter 13 (Al‑Hamadi): Solve vs. weaponize → choose restraint + limited release. Status: Full arc.
+  - Chapter 14 (Webb): Sacrifice → collapse the wound → salvation. Status: Full arc.
+  - Chapter 15 (Accord): Principles debated → handprints → adoption. Status: Full arc.
+  - Chapter 16 (Departures): Choreography → roles chosen → buoy message. Status: Full arc.
+  - Epilogue: Outcomes across time. Status: Full arc.
+
+Notes
+- Interludes are deliberately merged to preceding chapters to ensure minimum read length and deepen interpersonal dynamics (“soap” within science).
+- If print layout tests reveal sub‑three‑page spans, merge adjacent paired units as follows: (6 + Odyssey Interlude), (9 + Ares Interlude), (10 + Bloom Interlude).

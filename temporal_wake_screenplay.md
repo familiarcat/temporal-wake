@@ -791,6 +791,39 @@ Don't presume to know what my sacrifice means, Captain.
 
 But she doesn't cut the connection.
 
+INT. ODYSSEY VENTURE - COMMONS - LATER
+
+Plants in hydro trays. A kettle whistles.
+
+OKONKWO
+(to Venkataraman)
+Math says we’ll be fine. Why does my stomach disagree?
+
+VENKATARAMAN
+Because math is silent about people.
+
+KAITO enters with WEBB.
+
+WEBB
+I built teeth for wolves. I’d like to design a jaw for singing.
+
+OKONKWO
+I can tune a field to cradle instead of crush.
+
+KAITO
+Carl Sagan would say we are a way for the cosmos to forgive itself.
+
+VENKATARAMAN
+He’d also tell you to call Tomás.
+
+Kaito smiles; Webb pretends not to notice the softness.
+
+OKONKWO
+Soap opera update: hydroponics lead and comms are fighting about chore charts.
+
+VENKATARAMAN
+And kissing between fights. We contain multitudes.
+
 INT. GUARDIAN SENTINEL - BRIDGE
 
 Park watches the exchange between Ares Prime and Odyssey Venture play out on his screens. Reeves stands beside him.
@@ -1601,6 +1634,70 @@ When they're done, the monument shows dozens of handprints in various sizes. The
 CHEN
 "Here, humanity met itself and chose peace."
 
+INT. ARES PRIME - VIEWPORT - LATER
+
+Vasquez pins COMMAND INSIGNIA into HAYES' hand.
+
+VASQUEZ
+Command isn't awarded. It's chosen. Choose it every day.
+
+HAYES
+What if I choose wrong?
+
+VASQUEZ
+Then you choose again.
+
+She turns to REEVES.
+
+VASQUEZ (CONT'D)
+Major, Guardian Sentinel is forming Peacekeepers. Park needs someone who can do the calculus of restraint.
+
+REEVES
+I used to optimize casualties. I'd like to optimize trust.
+
+VASQUEZ
+Then go.
+
+INT. ODYSSEY VENTURE - ENGINE THROAT - SAME
+
+Kaito finds OKONKWO with a hand on the warp housing.
+
+KAITO
+First officer.
+
+OKONKWO
+Sir, I'm an engineer.
+
+KAITO
+Exactly. We need someone who knows how to build.
+
+OKONKWO
+What if I sing off-key?
+
+KAITO
+Then we learn a new key.
+
+INT. ARES PRIME - MESS DECK - SAME
+
+REEVES eats with surgical precision. HAYES pokes protein paste.
+
+REEVES
+Defectors to gardens. Admirals to treaties. Did we jump universes?
+
+HAYES
+We jumped eras.
+
+VASQUEZ (O.S.)
+We chose.
+
+She steps in, less armor in her voice.
+
+VASQUEZ (CONT'D)
+Eat. Rest. Tomorrow we meet people who think they’re us. Some of them are.
+
+REEVES
+Decent men are dangerous. They make you admit what you’ve done.
+
 ---
 
 ## SCENE: DEPARTURES
@@ -1878,10 +1975,12 @@ THE END
 ### PRACTICAL CONSIDERATIONS
 
 **Runtime Management**:
-- Feature film: 120-140 minutes
-- Limited series: 8 episodes × 55-65 minutes
-- This screenplay represents feature structure
-- Series version would expand Act Two significantly
+ - Feature cut target: 120 minutes (aim 115–118 script pages)
+ - Compress or cross‑cut the following for pace while preserving character arcs:
+   - Combine “FIRST CONTACT WITH OURSELVES” Commons beat into the A/B dialogue blocks (no added locations)
+   - Interleave “MESS DECK” with Summit debate to keep interpersonal stakes alive during exposition
+   - Keep Webb sacrifice sequence at full length (emotional spine)
+ - Limited series: 8 episodes × 55–60 minutes, expand Act Two character pairings
 
 **Budget Considerations**:
 - Five hero ships requiring unique designs
