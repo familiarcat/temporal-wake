@@ -54,6 +54,7 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
         { name: 'CHEN', role: 'Commander', leader: true },
         { name: 'HARTMANN', role: 'Botanist / Historian' },
         { name: 'MALIK', role: 'Chief Medical Officer' },
+        { name: 'KIMURA', role: 'Systems / Orchard' },
         { name: 'ALVAREZ', role: 'Logistics → Peacekeepers' }
       ]
     },
@@ -250,9 +251,10 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
   let ev = 0;
   function addEvent(from: string, to: string, label: string, doc: 'screenplay'|'novel'|'outline', q: string) {
     const eId = `EV${ev++}`;
-    g += `${eId}["${label}"]:::event\n`;
+    const safeLabel = label.replace(/\"/g, "'").replace(/"/g, "'");
+    g += `${eId}["${safeLabel}"]:::event\n`;
     g += `${idOf(from)}-->${eId}-->${idOf(to)}\n`;
-    g += `click ${eId} "${url(doc, q)}" "${label} — open ${doc}"\n`;
+    g += `click ${eId} "${url(doc, q)}" "${safeLabel} — open ${doc}"\n`;
   }
   function findPhrase(doc: 'screenplay'|'novel'|'outline', phrases: string[]): string | undefined {
     const text = (docTexts?.[doc] ?? '').toLowerCase();
@@ -289,6 +291,16 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
     { doc: 'screenplay', phrases: ['This system is under military jurisdiction','We come in peace'] },
     { doc: 'outline', phrases: ["explore, don't exploit"] },
   ]);
+  addEventSmart('OSEI','VASQUEZ','honor clause invoked', [
+    { doc: 'novel', phrases: ['Kinship Honor Clause'] },
+    { doc: 'screenplay', phrases: ['honor clause','Peacekeepers triad will witness'] },
+  ]);
+  addEventSmart('VENKATARAMAN','OKONKWO','kinship registry discovery', [
+    { doc: 'novel', phrases: ['Registry — Kin Across Time','Sato/Sato'] },
+  ]);
+  addEventSmart('HAYES','VASQUEZ','command transfer (Three Tests)', [
+    { doc: 'screenplay', phrases: ['Three Tests','necessity, proportionality, reversibility'] },
+  ]);
   addEventSmart('KAITO','AL-HAMADI','science exchange / navigation ethics', [
     { doc: 'outline', phrases: ['Prometheus Array (2103) launched as compromise','Map temporal wake'] },
   ]);
@@ -307,11 +319,12 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
   // Inter-ship relationships via event nodes with links (smart phrases)
   function addShipEventSmart(fromShip: string, toShip: string, label: string, candidates: Array<{doc: 'screenplay'|'novel'|'outline', phrases: string[] }>) {
     const eId = `SEV${ev++}`;
-    g += `${eId}["${label}"]:::event\n`;
+    const safeLabel = label.replace(/\"/g, "'").replace(/"/g, "'");
+    g += `${eId}["${safeLabel}"]:::event\n`;
     g += `${H(fromShip)}-->${eId}-->${H(toShip)}\n`;
     for (const c of candidates) {
       const phrase = findPhrase(c.doc, c.phrases);
-      if (phrase) { g += `click ${eId} "${url(c.doc, phrase)}" "${label} — open ${c.doc}"\n`; return; }
+      if (phrase) { g += `click ${eId} "${url(c.doc, phrase)}" "${safeLabel} — open ${c.doc}"\n`; return; }
     }
   }
   addShipEventSmart('Ares Prime','Odyssey Venture','ideological pressure', [
@@ -370,6 +383,12 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
   g += 'LR6["First Contact — diplomacy / linguistics"]\n';
   g += 'LR7["Chief Engineer — systems reliability"]\n';
   g += 'LR8["Lead Physicist / Navigator / AI Ethics — science core"]\n';
+  g += 'end\n';
+  g += 'subgraph Legend_Protocols[Protocols / SOPs]\n';
+  g += 'direction LR\n';
+  g += 'LP1["Parole of Purpose — handover, no sabotage, announce intent"]\n';
+  g += 'LP2["Neutral Corridors — blue/green routes, no arms"]\n';
+  g += 'LP3["Honor Clause — no first strike across confirmed kin"]\n';
   g += 'end\n';
   g += 'end\n';
 
