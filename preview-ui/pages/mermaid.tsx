@@ -53,7 +53,8 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
       crew: [
         { name: 'CHEN', role: 'Commander', leader: true },
         { name: 'HARTMANN', role: 'Botanist / Historian' },
-        { name: 'MALIK', role: 'Chief Medical Officer' }
+        { name: 'MALIK', role: 'Chief Medical Officer' },
+        { name: 'ALVAREZ', role: 'Logistics → Peacekeepers' }
       ]
     },
     'Prometheus Array': {
@@ -272,6 +273,14 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
     { doc: 'outline', phrases: ["Odyssey Venture (2134) represents new philosophy", "explore, don't exploit"] },
     { doc: 'novel', phrases: ['Odyssey Venture - Earth Year 2134'] },
   ]);
+  addEventSmart('OKONKWO','CHEN','secondment to Bloom (orchard quench)', [
+    { doc: 'screenplay', phrases: ['ORCHARD QUENCH','Parole of Purpose applies'] },
+    { doc: 'novel', phrases: ['INTERLUDE: Second Parole — The Corridor Oath','Parole of Purpose'] },
+  ]);
+  addEventSmart('ALVAREZ','REEVES','Mira Alvarez joins Peacekeepers', [
+    { doc: 'screenplay', phrases: ['SECOND PAROLE — PEACEKEEPERS TAKE A BLOOM','Welcome to regulated mercy.'] },
+    { doc: 'novel', phrases: ['Second Parole — The Corridor Oath','Peacekeepers Logistics'] },
+  ]);
   addEventSmart('VASQUEZ','PARK','shared era / mutual respect', [
     { doc: 'outline', phrases: ['Ares Prime (2087) and Guardian Sentinel (2089) launched'] },
     { doc: 'novel', phrases: ['Ares Prime - Earth Year 2087','Guardian Sentinel - Earth Year 2089'] },
@@ -323,6 +332,15 @@ function extractGraph(md: string, docTexts?: Record<'screenplay'|'novel'|'outlin
   ]);
   addShipEventSmart('Prometheus Array','Celestial Bloom','warnings / navigation', [
     { doc: 'outline', phrases: ['navigation'] },
+  ]);
+
+  // Epilogue anchors: 1977 Wow! detection and 2312 consolidated bursts
+  addShipEventSmart('Prometheus Array','Odyssey Venture','Epilogue: 1977 "Wow!" displacement (hidden cadence)', [
+    { doc: 'novel', phrases: ['Earth — 1977 (Ohio)','6EQUJ5'] },
+    { doc: 'outline', phrases: ['Earth (1977, Big Ear, Ohio)'] },
+  ]);
+  addShipEventSmart('Prometheus Array','Celestial Bloom','Epilogue: 2312 consolidated signals to Earth', [
+    { doc: 'outline', phrases: ['Earth (Year 2312, consolidated bursts)'] },
   ]);
 
   // Invisible ordering edges between headers (helps enforce LR chronology)

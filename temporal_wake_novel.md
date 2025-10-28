@@ -614,6 +614,8 @@ Park didn't have an answer. He sat in the command chair and watched the viewscre
 
 Nothing ever was.
 
+He reached into his pocket and closed his hand around the brass token. The circle it pressed into his palm was small enough to hide but deep enough to feel like a compass. Osei would say that compasses do not tell you where to go. They tell you where you are not lost.
+
 ---
 
 ### CHAPTER FOUR
@@ -1105,6 +1107,10 @@ The ship hummed its consent. Outside, stars arranged themselves into conversatio
 
 Webb glanced at the engineering readout—numbers across a page like tiny, obedient stars—and felt, for a brief heresy, that the universe might deserve them after all.
 
+Later, alone in engineering, Amara queued a message to LEENA KIMURA on Celestial Bloom—a scientist she’d met at the summit table, a smile like a solved equation.
+
+“We tune for cradle,” she said into the recorder. “You tune for growth. If you ever need a bridge between, I build those.” She did not send it. Yet.
+
 ---
 
 ### CHAPTER EIGHT
@@ -1112,6 +1118,10 @@ Webb glanced at the engineering readout—numbers across a page like tiny, obedi
 ### Guardian Sentinel – Obsolescence
 
 They had trained to be a shield. They had rehearsed scenarios where the colony ships screamed for help across empty light‑years and Guardian Sentinel arrived like providence. Instead, they arrived to a calendar that had run ahead without them.
+
+Park felt the old ritual trying to save him—thumb and forefinger smoothing an invisible wrinkle from his sleeve, the way his father had done before chess club when Park was ten. Back then, victory meant a paper ribbon and a bus ride home with his father’s hand on his shoulder. Later, victory meant fewer body bags. Somewhere between those two definitions he had mislaid the boy who played for the joy of seeing a pattern resolve.
+
+He carried a small brass token in his pocket, stamped with a date that no longer mattered. Seoul, the year the harbor went toxic. He had been off‑duty and still blamed himself—a superstition, but grief rarely respects logic. Osei had found him that night in a stairwell with the token pressed so hard into his palm it left a circle. “You’re not a levee,” the chaplain had said. “You can’t hold back a flood with your chest.” Park had not believed him then. He was starting to consider it now.
 
 “Celestial Bloom,” Reeves said, astonishment disguised as analysis. “Colony signatures, agricultural output in the megawatts, pediatric wing active.” She looked up. “Children.”
 
@@ -1130,6 +1140,18 @@ Park closed his eyes. “Tell me what you need now.”
 “Neighbors,” she said. “Not guardians. Not conquerors. People who understand how to share a kitchen.”
 
 Reeves made a sound that might have been a laugh if she believed in laughter. “A kitchen,” she repeated under her breath, as if testing a new tactic.
+
+The word disarmed him. Kitchens were his mother’s domain: stew on the stove, the radio low, a list on the wall of who washed and who dried. Duty made domestic. He looked at Reeves—the most precise mind he’d ever deployed—and saw exhaustion under the edge.
+
+“Major,” he said softly, so the bridge did not have to hear him be human, “when this is over, you and I are going to argue about chore charts.”
+
+“Sir?”
+
+“We’ll build a Peacekeepers’ manual,” he said. “Section One: Kitchens. Section Two: Corridors you do not aim guns down.”
+
+Something in her shoulders let go. “I’ll draft it,” she said. “With footnotes.”
+
+He almost smiled. Almost.
 
 ---
 
@@ -1263,6 +1285,23 @@ When he stepped onto Odyssey Venture, his bones remembered weight without armor.
 
 He laughed then, the small, honest laugh of a man who had come home to work.
 
+Alone later, he wrote a letter to no address: Keiko, I met a universe where the math is kind. There is a young engineer who believes it without embarrassment. If I follow that belief, it is not betrayal. It is fidelity to what you asked me to become.
+
+---
+
+### INTERLUDE: Archives — The Fracture We Came From
+#### Notes for Future Historians (Collected by Hartmann, Al‑Hamadi, Venkataraman)
+
+1) The Resource Wars did not only kill. They un‑taught. Institutions forgot how to mediate, languages shed words for courtesy, families split along ration lines and border checkpoints. We did not merely lose lives; we mislaid customs.
+
+2) “Traitor” became a common word; “Neighbor” became archaic. This lexical shift outlived the battles that caused it.
+
+3) Every ship carries this fracture. Ares Prime carries the grammar of orders. Guardian Sentinel carries the ritual of readiness. Prometheus carries the burden of knowing what should not be published. Odyssey carries the audacity to trust before proof. Celestial Bloom carries the stubbornness to plant.
+
+4) Convergence is not unity. It is a multifaceted mirror. We do not align; we reflect. If we are fortunate, we also learn.
+
+— J. Hartmann (editor), with marginalia from R. Al‑Hamadi and P. Venkataraman
+
 ---
 
 ## PART THREE: RECKONING
@@ -1290,6 +1329,64 @@ Vasquez stood on Celestial Bloom’s glass and watched history demand new gramma
 “I’d rather be a referee,” he said. “I think that’s what age is.”
 
 She did not tell him she had never had the luxury to age. She told him, “Then help me write them.”
+
+---
+
+### INTERLUDE: Standoff — Honor Clause Invoked
+#### Host and Guest
+
+Alarms spoke in terse syllables across three bridges.
+
+On Ares Prime, Reeves read the telemetry without blinking. “Target solution on Odyssey Venture achieved. Their shields are still down.”
+
+“Hold,” Vasquez said.
+
+On Odyssey, Okonkwo’s voice was steady. “We can raise shields in two seconds.”
+
+“We said we would trust,” Kaito answered. “We do not retract trust when it is tested.”
+
+On Celestial Bloom, Hartmann tapped the shared registry live‑link. The kin records floated like lanterns in a dark canal. He pinged a priority channel: HOST–GUEST (KIN): OKONKWO ↔ OSEI.
+
+Guardian Sentinel’s chapel light came on as Osei opened the comm to everyone at once. “By the registry you maintain, my great‑niece stands on Odyssey Venture’s deck,” he said gently. “We are host and guest.”
+
+Reeves’ jaw shifted by a millimeter. She did not call it softness. “Honor clause,” she said, not looking away from her console. “Host and guest. No first strikes across kin.”
+
+Vasquez nodded once. “Stand down firing solution.”
+
+On Odyssey’s bridge, Okonkwo exhaled. “Thank you, Uncle.”
+
+“Build well,” Osei said. “Make me deserve the word.”
+
+The alarms quieted, as if reminded what they were for.
+
+On Celestial Bloom’s mezzanine above the coordination hall, Leena Kimura watched Odyssey’s white hull on the screen and typed, erased, typed again: If you ever dock, I’ll show you where the corridor turns smell like apples. She saved it to drafts. Some invitations require a shared calendar most clocks do not have.
+
+---
+
+### INTERLUDE: Peacekeepers — Draft Zero
+#### Excerpts and Arguments
+
+Park and Reeves sat in a quiet auxiliary station with the lights low, the way people lower their voices for sincerity.
+
+Reeves projected a document titled “TEMPORAL PEACEKEEPERS — FIELD MANUAL (DRAFT 0).” Beneath it, smaller: “Corridors You Do Not Aim Guns Down.”
+
+1. First arrival claims responsibility, not territory.
+2. Kitchens are neutral zones. If you would not fire past a child rinsing a bowl, you will not fire at all.
+3. Introduce yourself with work you are willing to do, not rank you wish to be obeyed.
+4. Announce intentions before maneuvers. Navigation transparency prevents panic.
+5. Chaplaincy (or equivalent) on all teams. We police outcomes; they police reasons.
+6. When you are late, you are a neighbor, not a savior.
+7. When you are early, you are a host, not a lord.
+
+“We’ll be mocked for number two,” Reeves said, not without affection for the future critics. “But it’s the only rule I trust to spread.”
+
+“People know kitchens,” Park said. He rubbed the brass token with his thumb, feeling the circle he carried as an argument that fit in a pocket. “And if they don’t know rules, they know stew.”
+
+She added a footnote. Osei— Ethics: “A rule is a ritual you use when you cannot afford to think too slowly.”
+
+Park nodded. “Good. Keep it human. Keep it fast.”
+
+They wrote until the ship’s night asked them kindly to sleep.
 
 ---
 
@@ -1410,6 +1507,176 @@ The transfers happened quietly. The universe prefers commitments whispered over 
 
 ---
 
+### ANNEX: Inter‑Fleet Honors and Rank Protocol
+#### Adopted as an addendum to the Kepler Accord
+
+1) Rank Equivalency (courtesy precedence)
+   - Military: Admiral/General = Civilian Command: Captain/Commander = Colony: Steward/Commander.
+   - Science command equals domain command in science and navigation safety (Lead Physicist/Navigator ⇢ authority over temporal risk decisions).
+   - Tactical command equals domain command in active defense (senior line officer ⇢ authority over immediate force protection), constrained by Accord.
+
+2) Domain Authority (mission‑based)
+   - First Contact & Cultural Matters: Odyssey Venture (First Contact Lead). Military presence defers unless life safety is imminent.
+   - Temporal Navigation & Safety: Prometheus Array (Lead Physicist/Navigator). All vessels comply during coordinated jumps.
+   - Humanitarian & Settlement: Celestial Bloom (Steward/CMO). Neutral corridors and kitchens are to be respected.
+   - Tactical Emergencies: Ares Prime / Guardian Sentinel (senior line officer). Force is last resort and logged.
+
+3) Salute & Courtesy
+   - Universal greeting: open hand, palm visible (non‑weapon signal), then state name, ship, and role.
+   - Address by rank is courteous, not coercive; title does not override domain authority.
+   - Host/Guest: visiting crews are guests under host’s safety rules; hosts owe guests safe egress.
+
+4) Neutralities & Protections
+   - Neutral Zones: kitchens, medical bays, chapels, classrooms, gardens.
+   - Kin Honor: verified kin across ships are host/guest to each other; no first strikes across kin lines.
+   - Registry: kinship and role links maintained by Bloom and mirrored by Prometheus.
+
+5) Defection & Parole of Purpose
+   - Honorable defection permitted when purpose changes; requires handover of duties, notice to host, and absence of sabotage.
+   - Defectors retain personhood, lose access to their prior ship’s armory until trust re‑established.
+
+6) Discipline & Adjudication
+   - Peacekeepers boarding teams are triads (military, civilian, science). No unilateral arrests cross‑ship.
+   - Evidence logging is required; hearings convened with at least one non‑aligned vessel present.
+
+7) Colors & Signals
+   - Firing solution announcement before weapons charge is mandatory (temporal wake stability).
+   - Lights to signal intent: blue (aid), amber (evacuate), white (science ops), green (resupply), red (defense imminent).
+
+This annex acknowledges that rank without honor is merely costume; honor without rank is difficult to coordinate. We agree to wear both.
+
+— Signed with the Accord, Kepler‑442b
+
+---
+
+### INTERLUDE: SOP Leaflets — Ship‑Specific Protocols
+#### Distributed with the Accord
+
+ARES PRIME — RULES OF RESTRAINT
+- Announce Intent Before Movement (AIBM) on tactical channels.
+- The Three Tests: Necessity? Proportionality? Reversibility?
+- De‑escalation Ladder: Hail → Shadow → Block → Disable (systems) → Evacuate → Last‑Resort Defense.
+- Rank gives burden, not privilege; file a restraint log after every armed posture.
+
+GUARDIAN SENTINEL — PEACEKEEPERS PROCEDURES
+- Triad Teams: Military + Civilian + Science; no unilateral boarding.
+- Kitchens/Medical/Chapels/Classrooms/Gardens are neutral; disarm on entry.
+- Evidence First: body/bridge cams; immutable logs mirrored to Bloom and Prometheus.
+- Announce intent; escort rather than seize where possible.
+
+PROMETHEUS ARRAY — TEMPORAL PUBLICATION MORATORIUM
+- Embargo Criteria: weaponizability, destabilization risk, consent untestable.
+- Red‑Team Risk Reviews; cross‑ship panel sign‑off for releases.
+- Advisory Levels: White (info), Amber (caution), Red (comply), Black (cease ops).
+- Navigation keys time‑boxed; no persistent precision without Accord review.
+
+ODYSSEY VENTURE — FIRST CONTACT CODE
+- Primum non nocere (culture): do not harm what you came to understand.
+- Consent Ladders: observe → signal → mimic → exchange → meet.
+- Linguistic Humility: define before you generalize; translate before you label.
+- No weapons carried into first‑contact environments.
+
+CELESTIAL BLOOM — HOST/GUEST CHARTER
+- Corridor Colors: blue (aid), white (study), green (resupply), amber (evacuate), red (defense imminent).
+- Host obligations: shelter, food, safe egress; Guest obligations: respect neutral zones.
+- Adoption Registry: families may sponsor cross‑ship residence.
+- “Courtesy is the first technology.”
+
+---
+
+### INTERLUDE: Catalyst — The Orchard Quench
+#### Parole of Purpose
+
+The warning came as a ripple in Prometheus advisories—AMBER rising toward RED. A temporal plume, thin as an argument and just as dangerous, would cross Celestial Bloom’s agricultural rings within the hour. If the warp‑tuned life support field coughed at the wrong moment, the orchard microclimates would collapse.
+
+Leena Kimura didn’t finish her sentence. “We can’t—”
+
+“You can,” Amara Okonkwo said over the open line before Kaito could temper the impulse. “You need a cradle‑field tuned to plant metabolism. I can build that from here in time, or from there correctly.”
+
+Kaito heard what she did not say. From there with Leena. From there with the future.
+
+He looked at the First Contact Code on his screen, at the word that mattered most: consent. “Parole of Purpose applies,” he said. “You defect with honor—handover complete, no sabotage, transparent intent.” His voice softened. “Bring them through.”
+
+Reeves’ Peacekeepers triad took the escort—military, civilian, science—crossing on blue and green corridor lights that Leena herself redirected.
+
+Vasquez watched Ares Prime’s posture stay low. “Stand clear,” she told her gunners. “Garden work underway.”
+
+Al‑Hamadi pushed a WHITE advisory: informational. “Field resonance at 0.83—breathe there.”
+
+In the orchard ring, Amara met Leena with a nod that contained every unsent message. “Cradle first, then growth.”
+
+“Then growth,” Leena echoed, hands already in the panel.
+
+They tuned the field like a lullaby—load distribution across the ring, phase offsets where apples preferred to learn red. The plume arrived—a bright nothing—found the cradle and passed like a ghost through a house that did not mind ghosts.
+
+Across five bridges, people who didn’t believe in prayer exhaled as if they did.
+
+Amara set her tool down. “I won’t be coming back,” she said to Kaito over the channel that the whole system had the courtesy not to pretend they weren’t hearing. “Exploration was my first language. Building is my native tongue.”
+
+Kaito did not argue with grammar. “Then we send you love notes in the form of solved problems,” he said. “First Officer docket transferred. Be well.”
+
+Osei’s voice closed the circle. “We bless defection that is fidelity to becoming.”
+
+The registry updated: OKONKWO—STATUS: Bloom Resident Engineer (Parole of Purpose).
+
+And the orchard learned another song.
+
+---
+
+### INTERLUDE: Registry — Kin Across Time
+#### Family as Proof We Were One Story
+
+On Odyssey Venture, Venkataraman and Okonkwo stood over a shared holo—the inter‑ship registry Celestial Bloom maintained for resettlement and Prometheus mirrored for research.
+
+“Cross‑reference Sato lines,” Priya said. Names bloomed like constellations.
+
+“There,” Okonkwo pointed. “Captain Sato—Odyssey—lists Kenji Sato as maternal uncle. Prometheus lists Dr. Kenji Sato, AI Ethics.”
+
+Priya smiled. “A family arguing about time by working on opposite ends of it.”
+
+The console chimed again. Medical overlay: CHAPLAIN THOMAS OSEI — PRIMARY MATCH: 12.5% shared alleles with AMARA OKONKWO. 
+
+Okonkwo’s breath caught. “That’s… great‑uncle range.”
+
+“With migration and distance, twelve and a half is a miracle,” Priya said. “Ask permission. Then call him.”
+
+Minutes later: link established. Guardian Sentinel’s chapel—soft light, Osei’s face as kind as grief would allow.
+
+“Sir,” Amara said, suddenly formal in a way engineering never required. “Dr. Okonkwo, Odyssey Venture. Our registry indicates you may be my great‑uncle.”
+
+Osei blinked, then laughed the quiet laugh of a man who had learned to thank the universe without embarrassing it. “If the numbers say so, I will try to deserve it. Tell me about your engines.”
+
+“I tune them to cradle instead of crush.”
+
+“Then we are kin,” he said. “Whatever the math.”
+
+In Celestial Bloom’s coordination hall, Hartmann annotated the shared ledger: “Sato → Sato: confirmed family link (aunt/uncle). Osei → Okonkwo: confirmed great‑uncle.” He underlined the note twice, as if to teach the future how to recognize itself.
+
+Beneath the entry he added, almost ceremonially: “Honor clause proposed — kin across ships are host and guest to one another; no first strike across kinship lines. Courtesy is the first technology.”
+
+---
+
+### INTERLUDE: Second Parole — The Corridor Oath
+#### Peacekeepers Take a Bloom
+
+Mira Alvarez, logistics coordinator on Celestial Bloom, wore a vest with pockets that had learned more about supply chains than most officers learned about war. She met Reeves in a neutral corridor where blue and green strips ran like veins.
+
+“I can make your triads faster,” Mira said without apology. “Routes that don’t tangle, caches that stay honest. If I stay where I am, I optimize food. If I go with you, I optimize trust.”
+
+Reeves watched her hands as she spoke—steady, precise, never theatrical. “Parole of Purpose,” Reeves said. “Handover complete, no sabotage, transparent intent. And one oath.”
+
+Mira nodded. “I will announce intentions before movement. I will carry evidence. I will keep corridors blue and green.”
+
+Park arrived with Chen, both in the posture of leaders who understood adoption. “Host consents,” Chen said. “Guest consents,” Park echoed.
+
+They exchanged a smile that was not a treaty and felt like one anyway.
+
+The registry adjusted: ALVAREZ—STATUS: Peacekeepers Logistics (Parole of Purpose).
+
+Reeves handed her a triad band. “Welcome to regulated mercy,” she said. It was the closest thing to romance Reeves knew how to say out loud.
+
+---
+
 ### CHAPTER SIXTEEN
 #### Departures
 ### Orbits and Vectors – A Choreography
@@ -1419,6 +1686,14 @@ Over three days of local time, the sky learned patience. Ships slid away on sche
 Odyssey Venture left first among the five, because Kaito believed the lesson of Kepler‑442 was not to gather but to carry. Okonkwo took the science station that had been Webb’s and turned it into an altar for work that heals.
 
 Guardian Sentinel did not leave so much as reassign itself to a mission the manuals had not contained. Peacekeeper was a word that sat strangely on Park’s tongue and then fit. Reeves recalculated her pride into something that did not require casualties to prove it was correct.
+
+On the secondary channel, Osei’s voice carried like a steady hand on a shoulder. “Remember: announce intentions before movement.”
+
+“Manual number four,” Reeves said.
+
+“We wrote a book,” Park murmured.
+
+“We started a story,” Osei corrected. “Books are what other people call it when it’s over.”
 
 Ares Prime remained long enough for Hayes to accept command without apology. Vasquez transferred to the surface, where her uniform felt like a costume until the day a child asked her if heroes fought. “Sometimes,” she said. “Usually they stop.”
 
@@ -1475,6 +1750,16 @@ From high above, the wake of departures looked like calligraphy. No single autho
 We are the Temporal Wake, the buoy said without saying. We are what we chose to become.
 
 And the planet turned, generous as ever, providing low places for water and high places for looking and the exact amount of gravity required to keep a city from floating away.
+
+### Earth — 1977 (Ohio)
+
+At the Big Ear radio observatory—rows of wire, a patient sky—a volunteer circled a printout in pencil. Narrowband. Hydrogen line. Seventy‑two seconds. A column of characters that shouldn’t have been there: 6EQUJ5.
+
+He wrote two words in the margin that became a legend: Wow!
+
+No one on duty that night could know that buried in the cadence of a second, unrecorded sweep—timing no paper could hold—was a simpler glyph: five handprints pressed into stone, a rhythm that meant announce intentions before movement; host and guest; kitchens are neutral.
+
+Earth would argue about the scribble for decades. The universe has always preferred its invitations to be misunderstood first.
 
 ---
 

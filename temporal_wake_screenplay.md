@@ -797,7 +797,7 @@ Plants in hydro trays. A kettle whistles.
 
 OKONKWO
 (to Venkataraman)
-Math says we’ll be fine. Why does my stomach disagree?
+Math says we'll be fine. Why does my stomach disagree?
 
 VENKATARAMAN
 Because math is silent about people.
@@ -805,7 +805,7 @@ Because math is silent about people.
 KAITO enters with WEBB.
 
 WEBB
-I built teeth for wolves. I’d like to design a jaw for singing.
+I built teeth for wolves. I'd like to design a jaw for singing.
 
 OKONKWO
 I can tune a field to cradle instead of crush.
@@ -814,7 +814,7 @@ KAITO
 Carl Sagan would say we are a way for the cosmos to forgive itself.
 
 VENKATARAMAN
-He’d also tell you to call Tomás.
+He'd also tell you to call Tomás.
 
 Kaito smiles; Webb pretends not to notice the softness.
 
@@ -1258,6 +1258,22 @@ A fitting name.
 AL-HAMADI
 Good. Now let's make sure we all survive long enough to honor it.
 
+INT. TEMPORARY ARCHIVE - LATER
+
+Tables with mixed crews from multiple ships. HARTMANN posts a page: "THE FRACTURE WE CAME FROM."
+
+HARTMANN
+The Resource Wars didn't just kill people. They killed rituals. We lost the habit of neighborliness.
+
+VENKATARAMAN
+Defection became a tactic. Now it's a choice of culture. Between ships. Within ships.
+
+AL-HAMADI
+And science learned restraint by regret.
+
+KAITO
+Then let this be a mirror, not a weapon.
+
 ---
 
 ## [FILM VERSION: CONTINUE TO CLIMAX / SERIES VERSION: END EPISODE 4]
@@ -1419,6 +1435,204 @@ You're agreeing with them? You're from the wars. You understand reality.
 
 VASQUEZ
 I'm from your past, Admiral-General. And I'm telling you - trust her or die. Those are your options.
+
+---
+
+## SCENE: THE ORCHARD QUENCH (FILM)
+
+INT. PROMETHEUS ARRAY - LAB - CONTINUOUS
+
+Al-Hamadi studies a graph. AMBER advisory pulses.
+
+AL-HAMADI
+Temporal plume trending to RED. Projected path across Celestial Bloom’s agricultural ring in sixty minutes.
+
+SATO
+Advisory WHITE to all: informational. Publishing safe resonance band.
+
+INT. ODYSSEY VENTURE - BRIDGE - CONTINUOUS
+
+OKONKWO
+We can cradle-tune their ring from here in time... or from there correctly.
+
+KAITO
+Parole of Purpose applies. Handover complete, no sabotage, transparent intent. Go.
+
+VENKATARAMAN
+Peacekeepers escort on neutral corridors.
+
+INT. CELESTIAL BLOOM - NEUTRAL CORRIDOR - MINUTES LATER
+
+A PEACEKEEPERS TRIAD (military, civilian, science) escorts OKONKWO. Corridor strips glow BLUE/GREEN.
+
+CHEN (V.O.)
+Blue is aid, green is resupply. Stay on blue/green. No arms in neutral.
+
+PARK (V.O.)
+Triad on blue/green. Evidence rolling.
+
+INT. CELESTIAL BLOOM - ORCHARD RING BAY - CONTINUOUS
+
+LEENA KIMURA is already at a panel. Rows of apple trees under gentle rotation.
+
+LEENA
+We can phase-offset the life support to plant metabolism if we don’t snap the warp field.
+
+OKONKWO
+Cradle first, then growth.
+
+They work in tandem. Rapid insert of parameters; waveforms align.
+
+INTERCUT — BRIDGES
+
+PROMETHEUS — AL-HAMADI
+Resonance window at zero-point-eight-three. Hold there. Advisory WHITE remains.
+
+ARES PRIME — VASQUEZ
+Stand clear. Garden work underway.
+
+ODYSSEY — KAITO
+Confirming Okonkwo on Parole of Purpose. Proceed.
+
+BACK TO ORCHARD RING
+
+The PLUME arrives — invisible but for the instruments. Waveforms rise, settle.
+
+LEENA
+Stabilized.
+
+OKONKWO
+Ring load distributed. We’re through.
+
+INTERCUT — SYSTEM WIDE
+
+Small exhales across multiple ships.
+
+ODYSSEY BRIDGE
+
+KAITO
+First Officer docket transferring. Dr. Okonkwo, Celestial Bloom Resident Engineer.
+
+VENKATARAMAN
+Registry updated.
+
+GUARDIAN CHAPEL
+
+OSEI
+We bless defection that is fidelity to becoming.
+
+---
+
+## SCENE: STANDOFF — HONOR CLAUSE INVOKED
+
+INT. ARES PRIME - BRIDGE
+
+REEVES
+Target solution on Odyssey Venture. Their shields are still down.
+
+VASQUEZ
+Hold.
+
+INT. ODYSSEY VENTURE - BRIDGE
+
+OKONKWO
+We can raise shields in two seconds.
+
+KAITO
+We said we would trust. We don't retract trust when it's tested.
+
+INT. CELESTIAL BLOOM - COORDINATION HALL
+
+HARTMANN taps the REGISTRY. KIN link highlights: OKONKWO ↔ OSEI.
+
+INT. GUARDIAN SENTINEL - CHAPEL
+
+OSEI
+(open channel)
+By your registry, my great‑niece stands on Odyssey Venture's deck. We are host and guest.
+
+INT. ARES PRIME - BRIDGE
+
+REEVES
+Honor clause. No first strikes across kin.
+
+VASQUEZ
+Three Tests. Necessity? Proportionality? Reversibility?
+
+She considers, hard soldier turned careful steward.
+
+VASQUEZ (CONT'D)
+Negative on necessity. Abort posture.
+
+VASQUEZ
+Stand down firing solution.
+
+PARK (V.O.)
+Peacekeepers triad will witness. Evidence first.
+
+INT. ODYSSEY VENTURE - BRIDGE
+
+OKONKWO
+Thank you, Uncle.
+
+OSEI (V.O.)
+Build well.
+
+Alarms QUIET.
+
+INT. CELESTIAL BLOOM - MEZZANINE - CONTINUOUS
+
+LEENA KIMURA (30s, systems biologist) watches ODYSSEY on the scopes. She drafts a message, hesitates, saves it.
+
+INSERT — MESSAGE DRAFT: “If you ever dock, I’ll show you where the corridor turns smell like apples.”
+
+---
+
+## SCENE: NEUTRAL CORRIDOR — GUIDED ROUTE
+
+INT. CELESTIAL BLOOM - NEUTRAL CORRIDOR - LATER
+
+A PEACEKEEPERS TRIAD (military, civilian, science) advances. Corridor strips glow GREEN and BLUE.
+
+CHEN (V.O.)
+Corridor colors: blue is aid, green is resupply. Stay on blue/green. No arms in neutral.
+
+PARK (V.O.)
+Affirmative. Triad on blue/green.
+
+A BLOOM CHILD peeks, waves. The triad lower hands, palms open, passing like guests through a house.
+
+---
+
+## SCENE: SECOND PAROLE — PEACEKEEPERS TAKE A BLOOM
+
+INT. CELESTIAL BLOOM - NEUTRAL CORRIDOR - LATER
+
+MIRA ALVAREZ (30s, logistics) meets REEVES. Corridor strips glow BLUE/GREEN.
+
+MIRA
+If I stay, I optimize food. If I go with you, I optimize trust.
+
+REEVES
+Parole of Purpose. Handover complete, no sabotage, transparent intent. And one oath.
+
+MIRA
+Announce intentions before movement. Carry evidence. Keep corridors blue and green.
+
+PARK and CHEN arrive.
+
+CHEN
+Host consents.
+
+PARK
+Guest consents.
+
+Reeves hands MIRA a triad band.
+
+REEVES
+Welcome to regulated mercy.
+
+Mira smiles; it’s almost a love story.
 
 ---
 
@@ -1634,6 +1848,70 @@ When they're done, the monument shows dozens of handprints in various sizes. The
 CHEN
 "Here, humanity met itself and chose peace."
 
+INT. HABITAT - LATER (ANNEX ADOPTION)
+
+Projected text: "INTER‑FLEET HONORS AND RANK PROTOCOL."
+
+OBI
+Rank is courtesy, domain is authority. Science leads temporal safety; first contact leads culture; colony leads care; military leads last.
+
+VASQUEZ
+Rank without honor is costume. We agree to wear both.
+
+AL-HAMADI
+Prometheus will mirror the registry and publish domain advisories.
+
+CHEN
+Kitchens, medical, chapels, gardens, classrooms — neutral forever.
+
+PARK
+Peacekeeper teams: triads — military, civilian, science. No unilateral arrests.
+
+INT. CELESTIAL BLOOM - COORDINATION HALL - LATER
+
+Shared holo REGISTRY projects between ships. VENKATARAMAN and OKONKWO (on link) with HARTMANN present.
+
+VENKATARAMAN
+Cross‑ref Sato lines.
+
+OKONKWO
+Captain Sato… maternal uncle to Dr. Kenji Sato. Prometheus confirms.
+
+HARTMANN
+Family is empirical evidence of a shared story.
+
+The console CHIMES.
+
+OKONKWO
+(reading)
+Chaplain Thomas Osei… twelve‑point‑five percent shared alleles with… me.
+
+VENKATARAMAN
+Ask permission. Then call him.
+
+INT. GUARDIAN SENTINEL - CHAPEL - CONTINUOUS
+
+OSEI appears. Soft light.
+
+OKONKWO (ON SCREEN)
+Sir, registry indicates you may be my great‑uncle.
+
+OSEI
+Then I will try to deserve it. Tell me about your engines.
+
+OKONKWO (ON SCREEN)
+I tune them to cradle instead of crush.
+
+OSEI
+Then we are kin.
+
+HARTMANN (O.S.)
+(posting to the registry)
+Honor clause: kin across ships are host and guest; no first strikes across kin lines.
+
+VENKATARAMAN
+Courtesy is the first technology.
+
 INT. ARES PRIME - VIEWPORT - LATER
 
 Vasquez pins COMMAND INSIGNIA into HAYES' hand.
@@ -1693,10 +1971,10 @@ We chose.
 She steps in, less armor in her voice.
 
 VASQUEZ (CONT'D)
-Eat. Rest. Tomorrow we meet people who think they’re us. Some of them are.
+Eat. Rest. Tomorrow we meet people who think they're us. Some of them are.
 
 REEVES
-Decent men are dangerous. They make you admit what you’ve done.
+Decent men are dangerous. They make you admit what you've done.
 
 ---
 
@@ -1929,6 +2207,22 @@ SUPER: "We are the Temporal Wake. We are what we chose to become."
 
 FADE TO BLACK.
 
+FADE IN:
+
+SUPER: "EARTH, 1977 — BIG EAR, OHIO"
+
+INT. BIG EAR OBSERVATORY - NIGHT
+
+Printout, pen, fluorescent hum. A VOLUNTEER circles a column: 6EQUJ5.
+
+VOLUNTEER
+(under breath)
+Wow.
+
+INSERT — MARGIN: “Wow!” penciled.
+
+HARD CUT TO SKY — the faintest suggestion of timing under the noise, like five hands pressed into stone.
+
 THE END
 
 ---
@@ -1977,8 +2271,8 @@ THE END
 **Runtime Management**:
  - Feature cut target: 120 minutes (aim 115–118 script pages)
  - Compress or cross‑cut the following for pace while preserving character arcs:
-   - Combine “FIRST CONTACT WITH OURSELVES” Commons beat into the A/B dialogue blocks (no added locations)
-   - Interleave “MESS DECK” with Summit debate to keep interpersonal stakes alive during exposition
+   - Combine "FIRST CONTACT WITH OURSELVES" Commons beat into the A/B dialogue blocks (no added locations)
+   - Interleave "MESS DECK" with Summit debate to keep interpersonal stakes alive during exposition
    - Keep Webb sacrifice sequence at full length (emotional spine)
  - Limited series: 8 episodes × 55–60 minutes, expand Act Two character pairings
 

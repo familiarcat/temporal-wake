@@ -772,13 +772,18 @@ What becomes known as the **Kepler Accord**:
 
 **Time**: Various moments, various perspectives
 
-**Earth (Year 2312, when first signals arrive)**:
-- Transmission arrays receive data burst
-- All five ships' logs, sent decades apart, arrive within hours
-- Earth's current government (now post-national collective) analyzes the Kepler Accord
-- Realize their ships have been fragmenting through time for centuries
-- Decision: New protocols for warp travel, new understanding of humanity's relationship with time
-- Earth learns its future is not singular but multiplicative—every launched ship created new philosophical branch
+**Earth (1977, Big Ear, Ohio)**:
+- Volunteer circles printout: 6EQUJ5 — the "Wow!" notation enters lore
+- Temporal displacement implication: hidden cadence in an unrecorded sweep encodes Accord precepts (announce intentions, host/guest, neutral kitchens)
+- Misinterpreted or missed for decades; seeds a generation of listening and restraint ethics in SETI circles
+
+**Earth (Year 2312, consolidated bursts)**:
+- Transmission arrays receive clustered data bursts
+- Logs from multiple ships, sent decades apart locally, arrive within hours on Earth
+- Earth's current government (post-national collective) studies the Kepler Accord
+- Realization: Human expansion fragmented across time; "humanity" is now plural
+- Action: New warp travel protocols and ethical guidelines acknowledging temporal diaspora
+- Cultural shift: Future is multiplicative—each launch created a branch rather than a single line
 
 **Kepler-442b (Year 2215, local time)**:
 - Colony thriving, mixture of multiple Earth eras
