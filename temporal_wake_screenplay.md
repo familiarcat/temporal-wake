@@ -907,6 +907,12 @@ PARK
 (hollow)
 I don't know.
 
+REEVES
+Convoy sweep is due in forty‑eight hours. If we stay in this, we miss it.
+
+PARK
+No additional warps until we understand the convergence. We hold and we go back when we can without adding stress.
+
 ---
 
 ## SCENE: WEBB'S DEFECTION
@@ -1310,6 +1316,46 @@ The AI predicts catastrophic failure in sixteen hours if no coordinated action i
 AL-HAMADI
 Contact all vessels. We need to brief them on the danger.
 
+---
+
+## SCENE: ARCHIMEDES WATCH — HANDMADE WARP (INTERCUTABLE)
+
+INT. ARCHIMEDES - ENGINE ROOM - WATCH CYCLE
+
+LAILA BEN AMAR, EVAN ZHOU, MAEVE ORTEGA, RAJ PATEL, ISABEL DUARTE — five-person rotating watch — crowd a jury‑rigged field shaper built from spin coils and prayer.
+
+DUARTE
+Nav plotted. Kepler intercept in... destiny.
+
+PATEL
+Math agrees. Beautifully.
+
+MAEVE
+Seventeen thousand in cryo. Beautiful doesn’t keep them alive. Evidence does.
+
+ZHOU
+Power buffered. If this sings, it sings quiet.
+
+ZHOU (CONT'D)
+Sentinel sweep window passed. Laser link stayed dark.
+
+LAILA
+Okay. One skip. Then back to patience.
+
+She throws the lever. The DIRTY FIELD catches. The ship hums in a way it never has — wrong and wonderful.
+
+CHEERS. HUGS. A KISS (Laila/Zhou). Duarte and Patel share a look that promises a future they believe they’ve just made possible.
+
+CUTAWAY: GUARDIAN SENTINEL scopes spike. REEVES reads the rise, eyes narrowing — concern, not condemnation.
+
+REEVES (O.S.)
+No link. They’re in‑bubble.
+
+PARK (O.S.)
+We hold. Escort on exit.
+
+---
+
 EXT. KEPLER-442B - SURFACE - DESIGNATED LANDING ZONE
 
 A temporary habitat has been constructed. Representatives from all factions gather. 
@@ -1637,6 +1683,25 @@ Mira smiles; it’s almost a love story.
 ---
 
 ## SCENE: WEBB'S SACRIFICE
+## SCENE: PRE-JUMP ADVISORY — MISSED WINDOW
+
+INT. GUARDIAN SENTINEL - BRIDGE
+
+PARK, REEVES, link to PROMETHEUS ARRAY.
+
+AL-HAMADI (V.O.)
+Broadcast advisory: if pre‑bubble, hold parameters. Science inbound. Do not engage improvised warp.
+
+SATO (V.O.)
+Advisory sent. No acknowledgement. Probability they’re already in‑bubble: high.
+
+REEVES
+We wait for exit. No one crowds their corridor.
+
+PARK
+Copy. Evidence first, escort on exit.
+
+---
 
 INT. PROMETHEUS ARRAY - LABORATORY
 
@@ -1646,7 +1711,7 @@ WEBB
 Something's wrong. The departure sequence keeps failing in the simulations.
 
 AL-HAMADI
-I see it. There's a pre-existing instability. An incomplete warp bubble from... three weeks ago. One of the Unity Force ships had an emergency shutdown. The bubble didn't fully collapse.
+I see it. There's a pre-existing instability. An incomplete warp bubble from... somewhere. The signature isn't a standard fleet drive. Improvised geometry. The bubble didn't fully collapse.
 
 WEBB
 Can you calculate around it?

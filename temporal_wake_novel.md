@@ -1677,6 +1677,47 @@ Reeves handed her a triad band. “Welcome to regulated mercy,” she said. It w
 
 ---
 
+### INTERLUDE: Convoy — Skeleton Watches
+#### Archimedes Hears the Future
+
+They woke in twos, always in twos, so no one would forget how to say good morning. On Archimedes the watch kept a paper log because paper did not care if the power dipped for seven seconds between reactor swaps. Seventeen thousand souls in cryogenic sleep behind bulkheads designed for patience. Hundreds of thousands more across the convoy. Guardian Sentinel, far and faithful, was a green triangle on the nav board and a promise over the laser link.
+
+Five names repeated in the log, returning like seasons: Laila Ben Amar, Evan Zhou, Maeve Ortega, Raj Patel, Isabel Duarte. Three months awake together, then back to the white quiet of sleep while the next team carried the light.
+
+The week Guardian Sentinel’s convoy sweep was due, the laser link stayed dark. The green triangle did not blink. Schedules were law on Archimedes; missed schedules were omens. “Maybe they’re delayed,” Maeve said, the kind of hope that comes out as caution. No one believed it. The watch did what watches do when the promised knock never comes—they checked the locks, then started fixing what had always felt just out of reach.
+
+“If we could jump, even once,” said Second Watch Engineer Laila Ben Amar. “One clean skip. We would meet them. We would not be last to everything.”
+
+The design on the desk was both beautiful and foolish: a warp field sketched into margins, coils borrowed from engines meant for rotation, equations cribbed from transmissions delayed by decades. The convoy had been built for sublight humility; it had inherited a new century’s impatience.
+
+“We’re not stealing anything,” Isabel said, tapping Raj’s figures. “We’re joining history. We’re tired of being the last chapter.”
+
+Maeve set down the cryo slate like a benediction and a warning. “Seventeen thousand heartbeats are in my refrigerator. You don’t test destiny with that many dreams asleep.”
+
+Evan slid a hand along Laila’s wrist, a touch that had learned not to hurry. “One skip,” he said. “A good one. Then back to patience.”
+
+They sent their plan to no one. They built a test coil in silence. The field caught—not steady, not kind, but caught—wrapping the ship like a child trying to hold an ocean.
+
+On Guardian Sentinel, Reeves watched the telemetry bloom like frost. “Sir,” she said to Park. “A convoy ship just lit a bubble.”
+
+On Odyssey Venture, Webb stared as if looking at an old wound. “It’s a generation ship rig,” he said, voice lowered. “They’re using spin coils as poor man’s field shapers. If that bubble resonates with Kepler’s arrivals—”
+
+“How many aboard?” Kaito asked.
+
+“Tens of thousands aboard. Hundreds of thousands convoy‑wide. Cryo.” Webb didn’t finish the math out loud.
+
+Prometheus Array confirmed it with music: a dirty harmony weaving the system into a single trembling note.
+
+“If we collapse it wrong,” Tchaikovsky said, “we kill them. If we don’t collapse it, we kill everyone.”
+
+“No link,” Reeves said. “They’re in‑bubble.”
+
+Park’s jaw set. “We hold. Escort on exit. No crowding their corridor.”
+
+Webb already knew what the equation would ask of him.
+
+---
+
 ### CHAPTER SIXTEEN
 #### Departures
 ### Orbits and Vectors – A Choreography

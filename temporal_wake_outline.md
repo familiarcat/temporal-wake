@@ -45,9 +45,59 @@ The warp drive creates a bubble that contracts space ahead and expands it behind
 
 ---
 
-## THE FIVE SHIPS
+## THE SIX SHIPS
+ 
+### 1. ARCHIMEDES (Year 2085 — Generation Ship)
+**Launch Context**: Late Resource Wars era. Sublight convoy launched with multi‑world colonization plan. Warp technology either unavailable to convoy or held back from it; crew learns to accept generational time.
 
-### 1. ARES PRIME (Year 2087)
+**Mission**: Transport seventeen thousand colonists in cryogenic sleep to a target star via sublight. Maintain life support, rotation, and navigation across decades. Skeleton watches (five‑person teams) rotate three‑month awake cycles to preserve crew psychology and systems integrity.
+
+**Ship Design Philosophy**: Slow, massive, redundant. Wide agricultural bays for in‑flight sustainability, giant cryo galleries, manual overrides everywhere. Designed for patience and repairability, not speed. A world‑ship in miniature.
+
+#### Crew (Rotating Watch — 3‑month cycles)
+
+**Laila Ben Amar (engineer)**
+- **Background**: Orbital yard technologist turned convoy fixer; improvises field hardware from spare coils
+- **Role**: Hardware lead on the improvised field shaper
+- **Arc**: Believes duty means delivering families sooner → learns that intent without full knowledge can risk everyone → chooses to trust outside expertise when stakes are revealed
+- **Relationships**: Romantic partner of Zhou; creative foil to Patel
+
+**Evan Zhou (systems / power)**
+- **Background**: Power management savant; keeps a dying grid singing softly
+- **Role**: Power budgets, stabilization, “quiet warp” attempts
+- **Arc**: From careful stabilizer to courageous co‑conspirator → forced to weigh love and pride against new data
+- **Relationships**: Partner of Laila; steady friend to Maeve
+
+**Maeve Ortega (cryo / medic)**
+- **Background**: Steward of the sleeping; knows every cryo rack’s story
+- **Role**: Risk officer by conscience; monitors physiological and field‑bio coupling risk
+- **Arc**: From “never risk the sleeping” to “hold the field steady while help arrives” — courage as restraint
+- **Relationships**: Moral ballast to the team; protective of everyone
+
+**Raj Patel (field theory / math)**
+- **Background**: Self‑taught theorist from convoy libraries
+- **Role**: Derives the resonance window that makes the jump seem “safe”
+- **Arc**: Convincing theorist who must later accept external corrections; learns humility without losing fire
+- **Relationships**: Intellectual romance with Duarte
+
+**Isabel Duarte (nav / astrogation)**
+- **Background**: Navigator who still plots by stars for comfort
+- **Role**: Charts the intercept to Kepler‑442 on stale ephemerides; finds “poetic destiny” in the intercept
+- **Arc**: From “we’re joining history” to “we hold, together, while others help us land safely”
+- **Relationships**: Romantic/creative partner with Patel; sister‑bond with Maeve
+
+**Motivation & Blind Spots**
+- They were not “given” warp; they earned it through years of watch‑cycle toil. Their retrofit is, to them, rescue not hubris.
+- They do not know their handmade bubble couples into Kepler’s convergence; their instruments are too limited to see the systemic resonance.
+
+**Interactions**
+- Guardian Sentinel: Park/Reeves negotiate a safe‑hold (pre‑bubble only; in‑bubble comm impossible); Peacekeepers prepare escort
+- Prometheus Array: Al‑Hamadi/Tchaikovsky provide diagnostics; teaching moments on evidence over certainty
+- Odyssey Venture (Webb): Offers counter‑field math and, later, builds the counter‑field shuttle at personal cost
+
+---
+
+### 2. ARES PRIME (Year 2087)
 **Launch Context**: Resource Wars, nationalism at its peak, survival-of-the-fittest mentality dominates Earth politics. Climate collapse has made Earth resources scarce. Space expansion seen as zero-sum game.
 
 **Mission**: First warp-capable warship, sent to claim the Kepler-442 system before rival nations can reach it. Military expedition with scientific support.
@@ -81,8 +131,87 @@ The warp drive creates a bubble that contracts space ahead and expands it behind
 - **Philosophy**: "Orders are sacred" → "Purpose transcends orders"
 
 ---
+ 
+### 3. GUARDIAN SENTINEL (Year 2089)
+**Launch Context**: Two years after Ares Prime, tensions have escalated. Guardian Sentinel launched as military escort for slower-than-light colony ships (generation ships) heading to various systems. Earth in deep nationalist paranoia, multiple factions arming for space superiority.
 
-### 2. ODYSSEY VENTURE (Year 2134)
+**Mission**: Protect colony convoys from military threats, establish forward military bases, secure routes for Earth's expansion. Defense and deterrence. Escorts a multi‑ship generation convoy (hundreds of thousands in cryogenic sleep) with rotating skeleton crews awake to maintain sublight voyages.
+
+**Ship Design Philosophy**: Heavy armor, point-defense systems, long-range sensors, spartan military design, built for decades-long escort duty with large crew rotation capacity.
+
+**Operational Pattern (Pre‑Kepler)**:
+- Performs warp‑back “sweeps” along convoy track, checking in with currently active watches across generation ships.
+- Day‑scale for Guardian vs. bi‑yearly skeleton‑watch rotations on convoy; reassurance by design.
+- Standard practice: pre‑bubble advisories, no in‑bubble comm; escorts on exit only.
+
+**Operational Disruption (At Kepler)**:
+- Upon arrival and entanglement in convergence politics and spacetime stress advisories, Guardian cannot safely warp back for scheduled sweeps.
+- Missed sweep becomes the catalyst for Archimedes’ watch to attempt an improvised warp.
+
+#### Crew:
+
+**Colonel David Park (41, he/him)**
+- **Background**: Korean-American officer, lost his homeport in the Seoul Incident, dedicated to preventing further loss
+- **Role**: Commanding Officer
+- **Starting Philosophy**: "Duty is the only constant in chaos"
+- **Character Arc**: Soldier who follows orders without question → Discovers his escort mission is obsolete (colony ships already safely arrived via warp) → Must become a leader who questions everything → Realizes his true mission was never escort—it was to be the conscience of humanity's expansion → Forms coalition of military leaders across timelines to establish rules of engagement (Temporal Geneva Convention)
+- **Internal Conflict**: Identity defined by mission now meaningless, must find new purpose
+- **Key Relationships**: Mentored by Vasquez (similar backgrounds), protects Chen (the mission he couldn't complete), bonds with Webb over military guilt
+- **Overlap**: Shares with Commander Chen the weight of command and isolation; shares with Webb the need for redemption through changed purpose
+
+**Major Sarah Reeves (36, she/her)**
+- **Background**: Tactical genius, youngest major in fleet history, played war games since childhood
+- **Role**: Chief Tactical Officer, strategic operations
+- **Starting Philosophy**: "War is mathematics; compassion is weakness"
+- **Character Arc**: Strategic genius who sees people as variables → Encounters Celestial Bloom refugees who defy her calculations → Discovers the incalculable value of individual lives → Defects from Guardian Sentinel to help Park establish temporal peace accords → Learns strategic cooperation rather than strategic dominance
+- **Internal Conflict**: Pride in tactical brilliance vs. horror at human cost of her strategies
+- **Key Relationships**: Clashes with Park initially, eventual trust; intellectual respect for Al-Hamadi but moral opposition; alliance with Vasquez at the end
+- **Overlap**: Shares with Dr. Webb the guilt of tactical/scientific brilliance used for destruction; strategic thinking parallels Okonkwo's systematic approach
+
+**Chaplain Thomas Osei (47, he/him)**
+- **Background**: Former combat medic turned interfaith chaplain
+- **Role**: Moral counselor, crew support
+- **Arc**: Provides spiritual grounding → Helps Park and Reeves confront their guilt → Becomes philosopher of temporal ethics
+- **Philosophy**: "We carry our sins across any distance" → "Redemption exists in every moment"
+
+---
+ 
+### 4. PROMETHEUS ARRAY (Year 2103)
+**Launch Context**: Brief scientific renaissance after Resource Wars. Earth governments agreed to pool resources for pure research vessel to study warp phenomena. Understanding that temporal displacement is inevitable, mission designed to map the effects and develop solutions. Crew knows they can never return to their own time.
+
+**Mission**: Scientific research into warp mechanics, temporal displacement, and potential methods of return or synchronization. Study the problem, not explore or conquer. Vessel doubles as mobile laboratory and early-warning system.
+
+**Ship Design Philosophy**: Massive sensor arrays, multiple research laboratories, quantum computational cores, minimal weapons, comfortable but utilitarian, designed for extended isolated research. Looks more like a space station than a ship—modular, bristling with instruments.
+
+#### Crew:
+
+**Dr. Rashida Al-Hamadi (42, she/her)**
+- **Background**: Quantum physicist and temporal mechanics theorist, author of pre-warp papers predicting temporal displacement
+- **Role**: Lead Physicist, Mission Commander (scientific command structure)
+- **Starting Philosophy**: "To understand is to control"
+- **Character Arc**: Brilliant theorist who sought to master time → Realizes some knowledge comes at unbearable cost → Solves the temporal displacement mathematics completely → Discovers solution could enable temporal warfare (coordinated attacks across time) → Destroys her own research, choosing ignorance over apocalypse → Sacrifices her life's work and legacy for humanity's safety
+- **Internal Conflict**: Drive to understand vs. responsibility for what understanding enables, scientific glory vs. moral duty
+- **Key Relationships**: Intellectual collaboration and clash with Kaito (both scientists, different goals), rivalry with Reeves (science vs. tactics), respect for Okonkwo's practical engineering
+- **Overlap**: Shares with Dr. Kaito the scientific drive, but where he seeks connection, she seeks comprehension; mirrors Vasquez's "protect humanity at any cost" but through knowledge suppression rather than military might
+
+**Commander Leo Tchaikovsky (38, he/him)**
+- **Background**: Former concert pianist turned astrogation specialist, synesthesia helps him visualize 4D spacetime
+- **Role**: Chief Navigator, astrogation and sensor operations
+- **Starting Philosophy**: "Every equation tells a story of the universe"
+- **Character Arc**: Former artist who found beauty in mathematics → Must choose between preserving his ship or solving the temporal crisis → Maps the temporal wake patterns, discovers horrifying truth about spacetime destabilization → His navigation maps become the basis for "temporal charts"—ensuring ships can find each other across time → Creates art from data, helping crews visualize their place in temporal diaspora
+- **Internal Conflict**: Artist's soul in scientist's role, seeing beauty in patterns that represent human tragedy
+- **Key Relationships**: Collaboration with Okonkwo (engineers and navigators speak same language), provides Al-Hamadi with data she needs, friendship with Hartmann (both see poetry in their work)
+- **Overlap**: Shares with Dr. Hartmann a poetic view of humanity's place in cosmos; shares with Chen the outsider perspective (artist among scientists, like commander among generation-ship crew)
+
+**Dr. Kenji Sato (50, he/him)**
+- **Background**: Computer scientist specializing in AI ethics and temporal logic systems
+- **Role**: AI systems director, manages ship's predictive algorithms
+- **Arc**: Builds AI to predict temporal convergences → AI becomes too accurate, predicting human decisions → Must decide whether to trust machine predictions or human choice
+- **Philosophy**: "Prediction is not predestination"
+
+---
+
+### 5. ODYSSEY VENTURE (Year 2134)
 **Launch Context**: The First Reconciliation—Earth's governments united under shared climate recovery and resource abundance through fusion power. Scientific renaissance, renewed focus on exploration rather than exploitation. Xenobiology community argues for peaceful expansion protocols.
 
 **Mission**: Exploratory vessel seeking habitable worlds and potential first contact with alien intelligence. Scientific expedition with military protection detail. Mission: understand, document, establish peaceful relations.
@@ -117,42 +246,7 @@ The warp drive creates a bubble that contracts space ahead and expands it behind
 
 ---
 
-### 3. GUARDIAN SENTINEL (Year 2089)
-**Launch Context**: Two years after Ares Prime, tensions have escalated. Guardian Sentinel launched as military escort for slower-than-light colony ships (generation ships) heading to various systems. Earth in deep nationalist paranoia, multiple factions arming for space superiority.
-
-**Mission**: Protect colony convoys from military threats, establish forward military bases, secure routes for Earth's expansion. Defense and deterrence.
-
-**Ship Design Philosophy**: Heavy armor, point-defense systems, long-range sensors, spartan military design, built for decades-long escort duty with large crew rotation capacity.
-
-#### Crew:
-
-**Colonel David Park (41, he/him)**
-- **Background**: Korean-American officer, lost his homeport in the Seoul Incident, dedicated to preventing further loss
-- **Role**: Commanding Officer
-- **Starting Philosophy**: "Duty is the only constant in chaos"
-- **Character Arc**: Soldier who follows orders without question → Discovers his escort mission is obsolete (colony ships already safely arrived via warp) → Must become a leader who questions everything → Realizes his true mission was never escort—it was to be the conscience of humanity's expansion → Forms coalition of military leaders across timelines to establish rules of engagement (Temporal Geneva Convention)
-- **Internal Conflict**: Identity defined by mission now meaningless, must find new purpose
-- **Key Relationships**: Mentored by Vasquez (similar backgrounds), protects Chen (the mission he couldn't complete), bonds with Webb over military guilt
-- **Overlap**: Shares with Commander Chen the weight of command and isolation; shares with Webb the need for redemption through changed purpose
-
-**Major Sarah Reeves (36, she/her)**
-- **Background**: Tactical genius, youngest major in fleet history, played war games since childhood
-- **Role**: Chief Tactical Officer, strategic operations
-- **Starting Philosophy**: "War is mathematics; compassion is weakness"
-- **Character Arc**: Strategic genius who sees people as variables → Encounters Celestial Bloom refugees who defy her calculations → Discovers the incalculable value of individual lives → Defects from Guardian Sentinel to help Park establish temporal peace accords → Learns strategic cooperation rather than strategic dominance
-- **Internal Conflict**: Pride in tactical brilliance vs. horror at human cost of her strategies
-- **Key Relationships**: Clashes with Park initially, eventual trust; intellectual respect for Al-Hamadi but moral opposition; alliance with Vasquez at the end
-- **Overlap**: Shares with Dr. Webb the guilt of tactical/scientific brilliance used for destruction; strategic thinking parallels Okonkwo's systematic approach
-
-**Chaplain Thomas Osei (47, he/him)**
-- **Background**: Former combat medic turned interfaith chaplain
-- **Role**: Moral counselor, crew support
-- **Arc**: Provides spiritual grounding → Helps Park and Reeves confront their guilt → Becomes philosopher of temporal ethics
-- **Philosophy**: "We carry our sins across any distance" → "Redemption exists in every moment"
-
----
-
-### 4. CELESTIAL BLOOM (Year 2156)
+### 6. CELESTIAL BLOOM (Year 2156)
 **Launch Context**: Post-scarcity Earth, unified world government, focus on art, culture, and peaceful expansion. Ship originally designed as generation ship (200-year journey) was retrofitted with warp drive after 40 years in construction. Crew descended from original generation ship volunteers, many born on the ship during construction.
 
 **Mission**: Establish humanity's first extrasolar colony with focus on cultural preservation and ecological harmony. Not fleeing Earth, but expanding humanity's cultural diversity. Create "New Earth" without repeating old mistakes.
@@ -184,41 +278,6 @@ The warp drive creates a bubble that contracts space ahead and expands it behind
 - **Role**: Heads medical operations and genetic health of colony population
 - **Arc**: Focused on biological future of colony → Confronts temporal factions' genetic drift → Realizes humanity is diversifying across time as well as space
 - **Philosophy**: "Life adapts, or it ends"
-
----
-
-### 5. PROMETHEUS ARRAY (Year 2103)
-**Launch Context**: Brief scientific renaissance after Resource Wars. Earth governments agreed to pool resources for pure research vessel to study warp phenomena. Understanding that temporal displacement is inevitable, mission designed to map the effects and develop solutions. Crew knows they can never return to their own time.
-
-**Mission**: Scientific research into warp mechanics, temporal displacement, and potential methods of return or synchronization. Study the problem, not explore or conquer. Vessel doubles as mobile laboratory and early-warning system.
-
-**Ship Design Philosophy**: Massive sensor arrays, multiple research laboratories, quantum computational cores, minimal weapons, comfortable but utilitarian, designed for extended isolated research. Looks more like a space station than a ship—modular, bristling with instruments.
-
-#### Crew:
-
-**Dr. Rashida Al-Hamadi (42, she/her)**
-- **Background**: Quantum physicist and temporal mechanics theorist, author of pre-warp papers predicting temporal displacement
-- **Role**: Lead Physicist, Mission Commander (scientific command structure)
-- **Starting Philosophy**: "To understand is to control"
-- **Character Arc**: Brilliant theorist who sought to master time → Realizes some knowledge comes at unbearable cost → Solves the temporal displacement mathematics completely → Discovers solution could enable temporal warfare (coordinated attacks across time) → Destroys her own research, choosing ignorance over apocalypse → Sacrifices her life's work and legacy for humanity's safety
-- **Internal Conflict**: Drive to understand vs. responsibility for what understanding enables, scientific glory vs. moral duty
-- **Key Relationships**: Intellectual collaboration and clash with Kaito (both scientists, different goals), rivalry with Reeves (science vs. tactics), respect for Okonkwo's practical engineering
-- **Overlap**: Shares with Dr. Kaito the scientific drive, but where he seeks connection, she seeks comprehension; mirrors Vasquez's "protect humanity at any cost" but through knowledge suppression rather than military might
-
-**Commander Leo Tchaikovsky (38, he/him)**
-- **Background**: Former concert pianist turned astrogation specialist, synesthesia helps him visualize 4D spacetime
-- **Role**: Chief Navigator, astrogation and sensor operations
-- **Starting Philosophy**: "Every equation tells a story of the universe"
-- **Character Arc**: Former artist who found beauty in mathematics → Must choose between preserving his ship or solving the temporal crisis → Maps the temporal wake patterns, discovers horrifying truth about spacetime destabilization → His navigation maps become the basis for "temporal charts"—ensuring ships can find each other across time → Creates art from data, helping crews visualize their place in temporal diaspora
-- **Internal Conflict**: Artist's soul in scientist's role, seeing beauty in patterns that represent human tragedy
-- **Key Relationships**: Collaboration with Okonkwo (engineers and navigators speak same language), provides Al-Hamadi with data she needs, friendship with Hartmann (both see poetry in their work)
-- **Overlap**: Shares with Dr. Hartmann a poetic view of humanity's place in cosmos; shares with Chen the outsider perspective (artist among scientists, like commander among generation-ship crew)
-
-**Dr. Kenji Sato (50, he/him)**
-- **Background**: Computer scientist specializing in AI ethics and temporal logic systems
-- **Role**: AI systems director, manages ship's predictive algorithms
-- **Arc**: Builds AI to predict temporal convergences → AI becomes too accurate, predicting human decisions → Must decide whether to trust machine predictions or human choice
-- **Philosophy**: "Prediction is not predestination"
 
 ---
 
@@ -375,6 +434,8 @@ The warp drive creates a bubble that contracts space ahead and expands it behind
 - Park's entire purpose evaporates
 - Reeves runs tactical assessment: "Sir, that ship has families. Children. It's what we were supposed to protect."
 - Park: "We protected something that didn't need us. We gave up everything for a mission that's obsolete."
+- Reeves: "Convoy sweep is due in forty‑eight hours. If we stay entangled here, we miss it."
+- Park: "No additional warps until we understand the convergence and stress advisories. We hold position and make it right when we can."
 - Reeves realizes: they're not soldiers anymore, they're ghosts of a war that ended decades ago
 - Chaplain Osei: "Perhaps your mission wasn't the escort. Perhaps it was to be here now."
 
@@ -694,11 +755,12 @@ What becomes known as the **Kepler Accord**:
 - Petrov's representative agrees but demands Ares Prime—oldest military vessel—stands down permanently as symbolic gesture
 - Vasquez accepts: "My war is over. Let's make sure no one else has to fight it."
 - But: spacetime collapse accelerating, need more time
-- Webb: "The unstable warp bubble from that Unity Force ship three weeks ago—it's still partially manifested. It's causing the cascade."
+- Webb: "The resonance source isn't a fleet. It's a generation ship under Guardian escort. Their skeleton crew rigged an improvised warp field to 'catch up' to Kepler. Hundreds of thousands are in cryo inside that bubble. If we don't collapse it precisely, we lose them — or the cascade rips the system."
 - Okonkwo: "Can we collapse it?"
 - Webb: "Someone would have to fly directly into it. With a precisely calibrated counter-field."
 - Everyone looks at each other.
 - Webb: "I'll do it."
+ - Webb: "I'll do it." (He completes a warp‑capable counter‑field shuttle after his defection — a defensive instrument designed to precisely phase‑cancel the unstable bubble, even at the cost of his life.)
 
 **Webb's Sacrifice**:
 - "I spent my career building weapons. Let me save people instead."
@@ -1215,6 +1277,11 @@ If developed as ongoing series, each season/book could follow:
 - Ships temporally separated can't coordinate
 - Prometheus Array's solution (staggered departures) only works with advanced warning
 
+**Operational Rule — Warp Bubble Isolation**:
+- While a ship is in an active warp bubble, no external communication can enter and no internal transmission can exit; the bubble’s spacetime boundary excludes light and radio from crossing.
+- Only intra‑bubble comms function during warp; all signals resume once the bubble fully collapses on exit.
+- Attempts at quantum/entanglement signaling fail to transmit information (no-signaling theorem preserved).
+
 ### Earth's Evolution Timeline (Expanded)
 
 **2050-2085: Collapse Era**
@@ -1309,6 +1376,41 @@ The story mentions dozens of other ships/fleets. Here are notable ones:
 - Established own societies on various worlds
 - Range from anarchist communes to corporate autocracies
 - Notable: Some thriving, some failed, some unknown fate
+
+**Generation Convoy** (2080s launches):
+- Multi‑ship caravan launched alongside early military era
+- Sublight only; passengers in cryogenic sleep; skeleton crews rotate awake in multi‑year watches
+- Guardian Sentinel’s prime charter was to guard this convoy through deep space
+- One vessel, a research‑minded watch team, secretly retrofitted an improvised warp field to shorten the journey, intending to arrive at Kepler‑442 during the convergence
+- The unstable, uncalibrated field becomes the trigger for the system‑wide resonance risk that forces Webb’s intervention
+
+#### Archimedes (Convoy Vessel) — Rotating Watch (3‑month cycles)
+
+The Archimedes is one of the convoy’s keels, carrying seventeen thousand colonists in cryogenic sleep. Its operations are maintained by five‑person rotating watches who spend three months awake together, then return to cryo for recovery. Over years of cycles, the same five have come to know, love, and trust one another — forming a miniature society within a sleeping city.
+
+**Crew (Rotation Cycle)**
+- **Laila Ben Amar (engineer)**: Improvisational brilliance with hardware, designs the field shaper from spin‑coil components. Romantic partner of Zhou. Believes the moral duty is to deliver families sooner.
+- **Evan Zhou (systems / power)**: Quiet stabilizer of the group; keeps Laila’s designs alive with meticulous power budgets. His love for Laila and the sleeping colonists gives him courage — and blind spots.
+- **Maeve Ortega (cryo / medic)**: Guardian of the sleeping. Advocates conservative risk posture; monitors physiological risk from field fluctuations; moral ballast of the team.
+- **Raj Patel (field theory / math)**: Self‑taught theorist from convoy libraries; derives the resonance window that seems to make the jump “safe.” Confident, persuasive; professional sparks with Duarte.
+- **Isabel Duarte (nav / astrogation)**: Charts the intercept to Kepler‑442 using old ephemerides and limited updates. Sees the jump as poetic destiny — the convoy finally “joining history.”
+
+**Interpersonal Web**
+- Laila ⇄ Zhou: intimate bond; they measure time in “shared fixes” more than days.
+- Duarte ⇄ Patel: intellectual romance; arguments resolve at the whiteboard.
+- Maeve → All: caretaker skepticism; refuses to sign off until evidence convinces her.
+
+**Motivation & Blind Spots**
+- From their perspective, they were not “given” warp; they earned it through years of watch‑cycle toil. The retrofit is rescue, not hubris.
+- They do not know their improvised bubble will couple with Kepler’s converging signatures; the pending resonance is invisible from their limited instruments.
+
+**Inciting Absence**
+- A scheduled Guardian Sentinel convoy sweep fails to arrive (Guardian trapped by Kepler convergence and Accord politics). The missed check‑in breaks the rhythm the convoy depends on, pushing the watch toward their “one clean skip” attempt.
+
+**Interactions (Narrative Hooks)**
+- Guardian Sentinel: Park offers escort and caution; Reeves negotiates protocols for a safe hold while science arrives.
+- Prometheus Array: Al‑Hamadi/Tchaikovsky attempt remote diagnostics; teaching moments on evidence vs. certainty.
+- Odyssey Venture (Webb): Offers counter‑field math; refuses to shame them — speaks to intent and stakes, not blame.
 
 ### Alien Life in This Universe
 
